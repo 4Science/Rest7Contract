@@ -49,6 +49,7 @@ Provide detailed information about a specific bitstream format. The JSON respons
     "xml"
   ],
   "type": "bitstreamformat",
+  "uniqueType": "core.bitstreamformat",
   "_links": {
     "self": {
       "href": "https://dspace7-internal.atmire.com/rest/api/core/bitstreamformats/5"
