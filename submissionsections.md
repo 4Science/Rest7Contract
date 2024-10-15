@@ -17,15 +17,16 @@ Example: to be provided
 Provide detailed information about a specific submission-section. The JSON response document is as follow
 ```json
 {
-  	id: "id-of-the-submission-form-page",
-  	header: "First page",
-  	mandatory: true,
-  	sectionType: "submission-form",
-  	visibility: {
+  	"id": "id-of-the-submission-form-page",
+  	"header": "First page",
+  	"mandatory": true,
+  	"sectionType": "submission-form",
+  	"visibility": {
       "workflow": "hidden"
     },
-  	type: "submissionsection",
-  	_links: {
+  	"type": "submissionsection",
+	"uniqueType": "config.submissionsection",
+  	"_links": {
   		"config" : "<dspace-url>/config/submissionforms/<:id-of-the-submission-form-page>" 
   	}
 }

@@ -18,6 +18,7 @@ Provide detailed information about a specific workflow step. An example JSON res
 {
   	"id": "editstep",
   	"type": "workflowstep",
+    "uniqueType": "config.workflowstep",
     "_links": {
       "workflowactions": {
         "href": "https://demo.dspace.org/server/api/config/workflowsteps/<:step-name>/workflowactions"
@@ -33,7 +34,8 @@ Provide detailed information about a specific workflow step. An example JSON res
                 "reject",
                 "edit_metadata"
             ],
-            "type": "workflowaction"
+            "type": "workflowaction",
+            "uniqueType": "config.workflowaction",
           }
         ]
     }

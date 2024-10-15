@@ -23,6 +23,7 @@ Provide detailed information about a specific metrics. The JSON response documen
     "deltaPeriod2":31,
     "rank":50,
     "type":"metric",
+    "uniqueType": "cris.metric",
     "_links":{
         "self":{
             "href":"http://localhost/api/cris/metrics/1"

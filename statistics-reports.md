@@ -16,12 +16,14 @@ An example JSON response document to `/api/statistics/usagereports/1911e8a4-6939
 {
     "id": "1911e8a4-6939-490c-b58b-a5d70f8d91fb_TopCountries",
     "type": "usagereport",
+    "uniqueType": "statistics.usagereport",
     "report-type": "TopCountries",
     "view-mode": "map",
     "points": [
         {
             "label": "United States",
             "type": "country",
+            "uniqueType": "statistics.country",
             "id": "US",
             "values": {
                 "views": 2
@@ -30,6 +32,7 @@ An example JSON response document to `/api/statistics/usagereports/1911e8a4-6939
         {
             "label": "China",
             "type": "country",
+            "uniqueType": "statistics.country",
             "id": "CN",
             "values": {
                 "views": 1
@@ -100,12 +103,14 @@ An example JSON response document to `/api/statistics/usagereports/search/object
             {
                 "id": "6d65c6a2-3fe7-44dd-bacb-79271257c35d_TotalVisits",
                 "type": "usagereport",
+                "uniqueType": "statistics.usagereport",
                 "report-type": "TotalVisits",
                 "view-mode": "chart.bar",
                 "points": [
                     {
                         "label": "cad835c8-0cae-4769-a08a-857f0f814020",
                         "type": "item",
+                        "uniqueType": "statistics.item",
                         "id": "cad835c8-0cae-4769-a08a-857f0f814020",
                         "values": {
                             "views": 3313
@@ -114,6 +119,7 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     {
                         "label": "6759d5e0-3915-4864-917c-1940bdb75fbd",
                         "type": "item",
+                        "uniqueType": "statistics.item",
                         "id": "6759d5e0-3915-4864-917c-1940bdb75fbd",
                         "values": {
                             "views": 3308
@@ -122,6 +128,7 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     {
                         "label": "b0f6ce54-2ed8-4b67-a075-64794abb4e82",
                         "type": "item",
+                        "uniqueType": "statistics.item",
                         "id": "6759d5e0-3915-4864-917c-1940bdb75fbd",
                         "values": {
                             "views": 1800
@@ -148,12 +155,14 @@ An example JSON response document to `/api/statistics/usagereports/search/object
             {
                 "id": "1911e8a4-6939-490c-b58b-a5d70f8d91fb_TotalVisits",
                 "type": "usagereport",
+                "uniqueType": "statistics.usagereport",
                 "report-type": "TotalVisits",
                 "view-mode": "chart.bar",
                 "points": [
                     {
                         "label": "1911e8a4-6939-490c-b58b-a5d70f8d91fb",
                         "type": "item",
+                        "uniqueType": "statistics.item",
                         "id": "1911e8a4-6939-490c-b58b-a5d70f8d91fb",
                         "values": {
                             "views": 3
@@ -175,7 +184,8 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 0
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date"
                   },
                   {
                     "id": "October 2020",
@@ -183,7 +193,8 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 0
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date"
                   },
                   {
                     "id": "November 2020",
@@ -191,7 +202,8 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 0
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date",
                   },
                   {
                     "id": "December 2020",
@@ -199,7 +211,8 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 0
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date",
                   },
                   {
                     "id": "January 2021",
@@ -207,7 +220,8 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 0
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date",
                   },
                   {
                     "id": "February 2021",
@@ -215,7 +229,8 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 67
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date",
                   },
                   {
                     "id": "March 2021",
@@ -223,10 +238,12 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     "values": {
                       "views": 234
                     },
-                    "type": "date"
+                    "type": "date",
+                    "uniqueType": "statistics.date",
                   }
                 ],
                 "type": "usagereport",
+                "uniqueType": "statistics.usagereport",
                 "report-type": "TotalVisitsPerMonth",
                 "view-mode": "chart.line",
                 "_links": {
@@ -236,6 +253,7 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     {
                         "label": "1911e8a4-6939-490c-b58b-a5d70f8d91fb",
                         "type": "date",
+                        "uniqueType": "statistics.date",
                         "id": "1911e8a4-6939-490c-b58b-a5d70f8d91fb",
                         "values": {
                             "2020-03": 0,
@@ -253,12 +271,14 @@ An example JSON response document to `/api/statistics/usagereports/search/object
             {
                 "id": "1911e8a4-6939-490c-b58b-a5d70f8d91fb_TotalDownloads",
                 "type": "usagereport",
+                "uniqueType": "statistics.usagereport",
                 "report-type": "TotalDownloads",
                 "view-mode": "chart.bar",
                 "points": [
                     {
                         "label": "8d33bdfb-e7ba-43e6-a93a-f445b7e8a1e2",
                         "type": "bitstream",
+                        "uniqueType": "statistics.bitstream",
                         "id": "8d33bdfb-e7ba-43e6-a93a-f445b7e8a1e2",
                         "values": {
                             "downloads": 8
@@ -274,12 +294,14 @@ An example JSON response document to `/api/statistics/usagereports/search/object
             {
                 "id": "1911e8a4-6939-490c-b58b-a5d70f8d91fb_TopCountries",
                 "type": "usagereport",
+                "uniqueType": "statistics.usagereport",
                 "report-type": "TopCountries",
                 "view-mode": "map",
                 "points": [
                     {
                         "label": "United States",
                         "type": "country",
+                        "uniqueType": "statistics.country",
                         "id": "US",
                         "values": {
                             "views": 2
@@ -288,6 +310,7 @@ An example JSON response document to `/api/statistics/usagereports/search/object
                     {
                         "label": "China",
                         "type": "country",
+                        "uniqueType": "statistics.country",
                         "id": "CN",
                         "values": {
                             "views": 1

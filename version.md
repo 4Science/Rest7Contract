@@ -56,6 +56,7 @@ The following example shows all the available attributes as exposed to an admini
   "id": "345",
   "version": "101",
   "type": "version",
+  "uniqueType": "versioning.version",
   "created": "2015-11-03T09:44:46.617",
   "summary": "Fixing some typos in the abstract",
   "submitterName": "LastName, FirstName",

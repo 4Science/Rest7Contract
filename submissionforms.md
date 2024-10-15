@@ -192,7 +192,8 @@ Provide detailed information about a specific input-form. The JSON response docu
       ]
     }
   ],
-  "type": "submissionform"
+  "type": "submissionform",
+  "uniqueType": "config.submissionform"
 }
 ```
 

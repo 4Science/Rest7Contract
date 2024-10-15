@@ -27,6 +27,7 @@ Provide detailed information about a specific bundle. A sample JSON response doc
       ]
   },
   "type": "bundle",
+  "uniqueType": "core.bundle",
   "_links" : {
     "primarybitstream" : {
       "href" : "https://demo.dspace.org/server/api/core/bitstreams/ac49f361-4ffd-47a4-8eb2-e6c73c3f3e76"
@@ -77,6 +78,7 @@ Provide detailed information about a specific bundle. A sample JSON response doc
         },
         "sequenceId" : null,
         "type" : "bitstream",
+        "uniqueType": "core.bitstream",
         "_links" : {
           "content" : {
             "href" : "https://demo.dspace.org/server/api/core/bitstreams/1ce6db0e-662f-4a13-ba87-c371ad664b14/content"
@@ -123,6 +125,7 @@ Provide detailed information about a specific bundle. A sample JSON response doc
         },
         "sequenceId" : null,
         "type" : "bitstream",
+        "uniqueType": "core.bitstream",
         "_links" : {
           "content" : {
             "href" : "https://demo.dspace.org/server/api/core/bitstreams/4dd9621f-a464-4192-bc17-d70f68845bdc/content"

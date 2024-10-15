@@ -18,6 +18,7 @@ To create a new Tab perform as POST with the follow JSON:
   "priority": 1,
   "security": 0,
   "type": "tab",
+  "uniqueType": "layout.tab",
   "leading": "true",
   "rows": [
     {
@@ -167,6 +168,7 @@ Provide detailed information about a specific tab. The JSON response document is
   "priority": 1,
   "security": 0,
   "type": "tab",
+  "uniqueType": "layout.tab",
   "leading": "true",
   "rows": [
     {

@@ -76,7 +76,8 @@ For example, if an item exists with the following metadata
    "discoverable": true,
    "withdrawn": false,
    "lastModified": "2020-01-31T10:53:37.227+0000",
-   "type": "item"
+   "type": "item",
+   "uniqueType": "core.item"
 }	
 ```
 
@@ -182,7 +183,8 @@ The following duplicates are identified, listed inside detect-duplicate section:
             "discoverable": true,
             "withdrawn": false,
             "lastModified": "2020-01-31T10:53:37.227+0000",
-            "type": "item"
+            "type": "item",
+            "uniqueType": "submission.workspaceitem"
           }
         }
       }
@@ -247,7 +249,8 @@ will result in
             "discoverable": true,
             "withdrawn": false,
             "lastModified": "2020-01-31T10:53:37.227+0000",
-            "type": "item"
+            "type": "item",
+            "uniqueType": "core.item"
           }
         }
       }
@@ -311,7 +314,8 @@ and we would have achieved the following result:
             "discoverable": true,
             "withdrawn": false,
             "lastModified": "2020-01-31T10:53:37.227+0000",
-            "type": "item"
+            "type": "item",
+            "uniqueType": "core.item"
           }
         }
       }

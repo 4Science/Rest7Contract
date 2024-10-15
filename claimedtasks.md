@@ -16,7 +16,8 @@ Provide details about a specific task in the pool. The JSON response document is
     "id": 1,
     "step": "editstep",
     "action": "editaction",
-    "type": "claimedtask"
+    "type": "claimedtask",
+    "uniqueType": "workflow.claimedtask"
 }
 ```
 

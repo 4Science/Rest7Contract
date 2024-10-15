@@ -100,6 +100,7 @@ This will return the authentication status, E.G.:
   "okay" : true,
   "authenticated" : true,
   "type" : "status",
+  "uniqueType": "authn.status",
   "_links" : {
     "eperson" : {
       "href" : "http://${dspace-server.url}/api/eperson/epersons/2245f2c5-1bed-414b-a313-3fd2d2ec89d6"

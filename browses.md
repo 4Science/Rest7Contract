@@ -81,6 +81,7 @@ Provide detailed information about a specific browse index and access to the lis
   ],
   "order": "ASC",
   "type": "browse",
+  "uniqueType": "discover.browse",
   "metadata": [
     "dc.date.issued"
   ]
@@ -122,6 +123,7 @@ Provide detailed information about a specific hierarchical browse index and acce
   "facetType": "subject",
   "vocabulary": "srsc",
   "type": "browse",
+  "uniqueType": "discover.browse",
   "metadata": [
     "dc.subject"
   ],

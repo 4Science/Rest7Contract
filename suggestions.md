@@ -85,6 +85,7 @@ sample for a suggestion /api/integration/suggestions/reciter:gf3d657-9d6d-4a87-b
         ]
     },
     "type": "suggestion",
+    "uniqueType": "integration.suggestion",
     "_links": {
       "target": {
         "href": "https://dspace7.4science.cloud/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"
@@ -187,6 +188,7 @@ sample for a search /server/api/integration/suggestions/search/findByTargetAndSo
             ]
         },
         "type": "suggestion",
+        "uniqueType": "integration.suggestion",
         "_links": {
           "target": {
             "href": "https://dspace7.4science.cloud/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"

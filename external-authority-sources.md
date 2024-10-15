@@ -16,6 +16,7 @@ Example:
         "name": "orcid",
         "hierarchical": false,
         "type": "externalsource",
+        "uniqueType": "integration.externalsource",
         "_links": {
           "entries": {
             "href": "https://demo.dspace.org/server/api/integration/externalsources/orcid/entries"
@@ -33,6 +34,7 @@ Example:
         "name": "ciencia",
         "hierarchical": false,
         "type": "externalsource",
+        "uniqueType": "integration.externalsource",
         "_links": {
           "entries": {
             "href": "https://demo.dspace.org/server/api/integration/externalsources/ciencia/entries"
@@ -50,6 +52,7 @@ Example:
         "name": "my_staff_db",
         "hierarchical": false,
         "type": "externalsource",
+        "uniqueType": "integration.externalsource",
         "_links": {
           "entries": {
             "href": "https://demo.dspace.org/server/api/integration/externalsources/my_staff_db/entries"
@@ -87,7 +90,8 @@ Provide detailed information about a specific external source. The JSON response
   "id": "orcid",
   "name": "orcid",
   "hierarchical": false,
-  "type": "externalsource"
+  "type": "externalsource",
+  "uniqueType": "integration.externalsource"
 }
 ```
 
@@ -219,6 +223,7 @@ sample for an external source /server/api/integration/externalsources/orcid/entr
           "type" : "item"
         }],
         "type": "externalSourceEntry",
+        "uniqueType": "integration.externalSourceEntry"
         "_links": {
           "authority": {
             "href": "https://demo.dspace.org/server/api/integration/authorities/authors/entryValues/d4b5ca88-9d6d-4a87-b905-fef0f8cae26c"
@@ -274,6 +279,7 @@ sample for an external source /server/api/integration/externalsources/orcid/entr
             ]
         },
         "type": "externalSourceEntry",
+        "uniqueType": "integration.externalSourceEntry",
         "_links": {
           "entity": {
             "href": "https://demo.dspace.org/server/api/core/item/6fd90bf5-b84f-47b3-aaec-a55bde3a2a5a"
@@ -303,6 +309,7 @@ sample for an external source /api/integration/externalsources/orcid/entryValues
   "display": "Smith, Dean",
   "value": "Smith, Dean",
   "type": "externalSourceEntry",
+  "uniqueType": "integration.externalSourceEntry",
   "externalSource": "orcid",
   "metadata": {
     "dc.identifier.orcid": [

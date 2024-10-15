@@ -31,7 +31,8 @@ Provide detailed information about a specific edititem. The JSON response docume
 			]
 		}
 	},
-	"type":"edititem"
+	"type":"edititem",
+  "uniqueType": "core.edititem"
 }
 ```
 Return codes:
@@ -68,6 +69,7 @@ The JSON response document is as follow
         "label": null,
         "submissionDefinition": "publication-edit",
         "type": "edititemmode",
+        "uniqueType": "core.edititemmode",
         "_links": {
           "self": {
             "href": "https://{dspace-cris-backend-url}/server/api/core/edititemmodes/FULL"

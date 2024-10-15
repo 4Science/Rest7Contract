@@ -198,6 +198,7 @@ This endpoint will return a list of files that are associated with the process, 
           },
           "sequenceId": null,
           "type": "bitstream",
+          "uniqueType": "core.bitstream",
           "_links": {
             "content": {
               "href": "/api/core/bitstreams/e2343390-0b1b-4397-be3d-66fed243a436/content"
@@ -219,6 +220,7 @@ This endpoint will return a list of files that are associated with the process, 
               "internal": false,
               "extensions": null,
               "type": "bitstreamformat",
+              "uniqueType": "core.bitstreamformat",
               "_links" : {
                 "self" : {
                   "href": "/api/core/bitstreamformats/27"
@@ -260,6 +262,7 @@ This endpoint will return a list of files that are associated with the process, 
           },
           "sequenceId": null,
           "type": "bitstream",
+          "uniqueType": "core.bitstream",
           "_links": {
             "content": {
               "href": "/api/core/bitstreams/e2343390-0b1b-4397-be3d-66fed243a436/content"
@@ -281,6 +284,7 @@ This endpoint will return a list of files that are associated with the process, 
               "internal": false,
               "extensions": null,
               "type": "bitstreamformat",
+              "uniqueType": "core.bitstreamformat",
               "_links": {
                 "self": {
                   "href": "/api/core/bitstreamformats/6"
@@ -326,6 +330,7 @@ This endpoint will return all the different file types for the given process.  T
     "outputFile"
   ],
   "type": "filetypes",
+  "uniqueType": "system.filetypes",
   "_links": {
     "self": {
         "href": "/api/system/processes/10/filetypes"

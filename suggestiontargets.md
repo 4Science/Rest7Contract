@@ -19,6 +19,7 @@ sample for a suggestion /api/integration/suggestiontargets/scopus:nhy567-9d6d-ty
     "source": "scopus",
     "total": 3,
     "type": "suggestiontarget",
+    "uniqueType": "integration.suggestiontarget",
     "_links": {
       "target": {
         "href": "https://dspace7.4science.cloud/server/api/core/items/nhy567-9d6d-ty67-b905-fef0f8cae26"
@@ -70,6 +71,7 @@ Example:
         "source": "reciter",
         "total": 31,
         "type": "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
         "_links": {
           "target": {
             "href": "https://dspace7.4science.cloud/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"
@@ -88,6 +90,7 @@ Example:
         "source": "reciter",
         "total": 12,
         "type": "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
         "_links": {
           "target": {
             "href": "https://dspace7.4science.cloud/server/api/core/items/nhy567-9d6d-ty67-b905-fef0f8cae26"
@@ -142,6 +145,7 @@ Example:
         "source": "reciter",
         "total": 31,
         "type": "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
         "_links": {
           "target": {
             "href": "https://dspace7.4science.cloud/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"
@@ -160,6 +164,7 @@ Example:
         "source": "scopus",
         "total": 11,
         "type": "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
         "_links": {
           "target": {
             "href": "https://dspace7.4science.cloud/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"

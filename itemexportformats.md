@@ -18,6 +18,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Publication",
         "molteplicity": "SINGLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -45,6 +46,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Person",
         "molteplicity": "MULTIPLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -72,6 +74,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Person",
         "molteplicity": "SINGLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -99,6 +102,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Publication",
         "molteplicity": "SINGLE_AND_MULTIPLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -126,6 +130,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Publication",
         "molteplicity": "SINGLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -153,6 +158,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Publication",
         "molteplicity": "SINGLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -180,6 +186,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Person",
         "molteplicity": "SINGLE_AND_MULTIPLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -207,6 +214,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Person",
         "molteplicity": "SINGLE_AND_MULTIPLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -234,6 +242,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Person",
         "molteplicity": "SINGLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -261,6 +270,7 @@ Provide access to all the supported formats. The full JSON response document is 
         "entityType": "Person",
         "molteplicity": "MULTIPLE",
         "type": "itemexportformat",
+        "uniqueType": "integration.itemexportformat",
         "query": "query",
         "appliedFilters": [
           {
@@ -317,6 +327,7 @@ Provide detailed information about a specific item export format. An example JSO
     "entityType": "Person",
     "molteplicity": "SINGLE",
     "type": "itemexportformat",
+    "uniqueType": "integration.itemexportformat",
     "query": "query",
     "appliedFilters": [
       {

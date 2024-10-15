@@ -160,7 +160,8 @@ The JSON response document is as follow
       "name": "dc.date.accessioned"
     }
   ],
-  "type": "discover"
+  "type": "discover",
+  "uniqueType": "discover.discover"
 }
 ```
 
@@ -363,6 +364,7 @@ The returned JSON response will be like:
               "label": "1940 - 1959",
               "count": 23370,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[1940 TO 1959],equals"
@@ -373,6 +375,7 @@ The returned JSON response will be like:
               "label": "1960 - 1979",
               "count": 45044,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[1960 TO 1979],equals"
@@ -383,6 +386,7 @@ The returned JSON response will be like:
               "label": "1980 - 1999",
               "count": 56128,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[1980 TO 1999],equals"
@@ -393,6 +397,7 @@ The returned JSON response will be like:
               "label": "2000 - 2017",
               "count": 51707,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[2000 TO 2017],equals"
@@ -584,6 +589,7 @@ The returned JSON response will be like:
               "label": "1940 - 1959",
               "count": 23370,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[1940 TO 1959],equals"
@@ -594,6 +600,7 @@ The returned JSON response will be like:
               "label": "1960 - 1979",
               "count": 45044,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[1960 TO 1979],equals"
@@ -604,6 +611,7 @@ The returned JSON response will be like:
               "label": "1980 - 1999",
               "count": 56128,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[1980 TO 1999],equals"
@@ -614,6 +622,7 @@ The returned JSON response will be like:
               "label": "2000 - 2017",
               "count": 51707,
               "type": "discover",
+              "uniqueType": "discover.discover",
               "_links": {
                 "search": {
                   "href": "http://dspace7-internal.atmire.com/rest/api/discover/search/objects?f.dateIssued=[2000 TO 2017],equals"
@@ -630,7 +639,7 @@ The returned JSON response will be like:
 It is also possible to configure a facet to expose the number of documents without any value, the number of distinct values in the facet and a link to get all the documents that don't contain any of the value in the current facet page.
 With all this option enabled the response will look like that
 
-```
+```json
 {
   "id":null,
   "scope":null,
@@ -646,6 +655,7 @@ With all this option enabled the response will look like that
   "totalElements":"6",
   "prefix":null,
   "type":"discover",
+  "uniqueType": "discover.discover",
   "page":{"number":0,"size":10},
   "_links":
     {
@@ -669,6 +679,7 @@ With all this option enabled the response will look like that
               "label":"software paper",
               "count":2,
               "type":"discover",
+              "uniqueType": "discover.discover",
               "_links":{
                   "search":
                       {
@@ -700,6 +711,7 @@ The JSON response document is as follow
   "sort": null,
   "configurationName": null,
   "type": "discover",
+  "uniqueType": "discover.discover",
   "_links": {
     "first": {
       "href": "/api/discover/search/facets?page=0&size=10"
@@ -872,7 +884,7 @@ This configuration is used to retrieve all the submission done by the current us
 
 Example
 
-```
+```json
 {
   "id" : null,
   "scope" : null,
@@ -881,6 +893,7 @@ Example
   "sort" : null,
   "configuration" : "workspace",
   "type" : "discover",
+  "uniqueType": "discover.discover",
   "_links" : {
     "self" : {
       "href" : "https://demo.dspace.org/server/api/discover/search/objects?configuration=workspace"
@@ -892,6 +905,7 @@ Example
         "objects" : [ {
           "hitHighlights" : null,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "indexableObject" : {
               "href" : "https://demo.dspace.org/server/api/submission/workspaceitems/8"
@@ -928,6 +942,7 @@ Example
                 }
               },
               "type" : "workspaceitem",
+              "uniqueType": "submission.workspaceitem",
               "_links" : {
                 "collection" : {
                   "href" : "https://demo.dspace.org/server/api/submission/workspaceitems/8/collection"
@@ -962,6 +977,7 @@ Example
         }, {
           "hitHighlights" : null,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "indexableObject" : {
               "href" : "https://demo.dspace.org/server/api/submission/workspaceitems/9"
@@ -998,6 +1014,7 @@ Example
                 }
               },
               "type" : "workspaceitem",
+              "uniqueType": "submission.workspaceitem",
               "_links" : {
                 "collection" : {
                   "href" : "https://demo.dspace.org/server/api/submission/workspaceitems/9/collection"
@@ -1032,6 +1049,7 @@ Example
         }, {
           "hitHighlights" : null,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "indexableObject" : {
               "href" : "https://demo.dspace.org/server/api/workflow/workflowitems/3"
@@ -1068,6 +1086,7 @@ Example
                 }
               },
               "type" : "workflowitem",
+              "uniqueType": "submission.workspaceitem",
               "_links" : {
                 "collection" : {
                   "href" : "https://demo.dspace.org/server/api/workflow/workflowitems/3/collection"
@@ -1132,6 +1151,7 @@ Example
           "label" : "Workspace",
           "count" : 2,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "https://demo.dspace.org/server/api/discover/search/objects?configuration=workspace&f.namedresourcetype=workspace,authority"
@@ -1141,6 +1161,7 @@ Example
           "label" : "Workflow",
           "count" : 1,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "https://demo.dspace.org/server/api/discover/search/objects?configuration=workspace&f.namedresourcetype=workflow,authority"
@@ -1180,6 +1201,7 @@ Example
           "label" : "2010",
           "count" : 3,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "https://demo.dspace.org/server/api/discover/search/objects?configuration=workspace&f.dateIssued=2010,equals"
@@ -1195,7 +1217,7 @@ Example
 ### workflow
 This configuration is used to retrieve all the tasks relevant for the current user. This mean pool tasks that can be claimed or already claimed tasks.
 Example
-```
+```json
 {
   "id" : null,
   "scope" : null,
@@ -1204,6 +1226,7 @@ Example
   "sort" : null,
   "configuration" : "workflow",
   "type" : "discover",
+  "uniqueType": "discover.discover",
   "_links" : {
     "self" : {
       "href" : "http://localhost/api/discover/search/objects?configuration=workflow"
@@ -1215,6 +1238,7 @@ Example
         "objects" : [ {
           "hitHighlights" : null,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "indexableObject" : {
               "href" : "http://localhost/api/workflow/pooltasks/1"
@@ -1226,6 +1250,7 @@ Example
               "step" : "reviewstep",
               "action" : "claimaction",
               "type" : "pooltask",
+              "uniqueType": "workflow.pooltasks",
               "_links" : {
                 "eperson" : {
                   "href" : "http://localhost/api/workflow/pooltasks/1/eperson"
@@ -1254,6 +1279,7 @@ Example
         }, {
           "hitHighlights" : null,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "indexableObject" : {
               "href" : "http://localhost/api/workflow/pooltasks/3"
@@ -1265,6 +1291,7 @@ Example
               "step" : "reviewstep",
               "action" : "claimaction",
               "type" : "pooltask",
+              "uniqueType": "workflow.pooltasks",
               "_links" : {
                 "eperson" : {
                   "href" : "http://localhost/api/workflow/pooltasks/3/eperson"
@@ -1322,6 +1349,7 @@ Example
           "label" : "Waiting for Controller",
           "count" : 2,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "http://localhost/api/discover/search/objects?configuration=workflow&f.namedresourcetype=waitingforcontroller,authority"
@@ -1361,6 +1389,7 @@ Example
           "label" : "2010",
           "count" : 2,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "http://localhost/api/discover/search/objects?configuration=workflow&f.dateIssued=2010,equals"
@@ -1386,6 +1415,7 @@ Example
           "label" : "first (admin) last (admin)",
           "count" : 1,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "http://localhost/api/discover/search/objects?configuration=workflow&f.submitter=9ad6a949-9f4f-4504-8a5a-881274ac0bc3,authority"
@@ -1395,6 +1425,7 @@ Example
           "label" : "first last",
           "count" : 1,
           "type" : "discover",
+          "uniqueType": "discover.discover",
           "_links" : {
             "search" : {
               "href" : "http://localhost/api/discover/search/objects?configuration=workflow&f.submitter=014186a8-aae1-45e9-879e-48416acd6248,authority"

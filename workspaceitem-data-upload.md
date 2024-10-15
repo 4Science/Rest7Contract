@@ -7,9 +7,9 @@ The section data represent the data about the user uploaded files
 {
 	"files": [ 
   	 	{
-  	 		metadata: {
-  	 			"dc.title" : [{value: "sample_file.pdf"}],
-  	 			"dc.description" : [{value: "Description of the sample file"}]
+  	 		"metadata": {
+  	 			"dc.title" : [{"value": "sample_file.pdf"}],
+  	 			"dc.description" : [{"value": "Description of the sample file"}]
   	 		},
   	 		"sizeBytes": 8528,
 			"checkSum": {
@@ -75,55 +75,55 @@ for instance the call
 will set the title of the first uploaded file to MyFile.pdf returning the following json document
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
-	{
-		"traditional-page1":
-		{
-		  "dc.title" : [{value: "Sample Submission Item", language: "en"}],
-		  "dc.contributor.author" : [
-		  	 		{value: "Bollini, Andrea", authority: "rp00001", confidence: 600}
-		  ]
-		},
-		"uploads":
-		{	
-			"files": [ 
-	  	 	{
-	  	 		metadata: {
-	  	 			"dc.title" : [{value: "MyFile.pdf"}],
-	  	 			"dc.description" : [{value: "Description of the sample file"}]
-	  	 		},
-	  	 		"sizeBytes": 8528,
-				"checkSum": {
-				    "checkSumAlgorithm": "MD5",
-				    "value": "9d8f0f9e369cf12159d47c146c499cf4"
-				},
-	  	 		"url": "https://demo.dspace.org/server/api/core/bitstreams/00001abf-b2e0-477a-99de-104db7cb6469/content",
-	  	 		"accessConditions": [
-	  	 			{
-	  	 				"id": 123,
-		  	 			"name": "openaccess"
-	  	 			},
-	  	 			{
-	  	 				"id": 126,
-		  	 			"name": "administrator"
-	  	 			},
-	  	 			{
-	  	 				"id": 127,
-		  	 			"name": "embargo",
-		  	 			"startDate": "2018-06-24T00:40:54.970+0000"
-	  	 			},
-	  	 			{
-	  	 				"id": 128,
-		  	 			"name": "lease",
-		  	 			"endDate": "2017-12-24T00:40:54.970+0000"
-	  	 			}
-	  	 		]
-	 		}
- 		]
-		}
-	}
+    "id": 1,
+    "type": "workspaceitem",
+    "uniqueType": "submission.workspaceitem",
+    "sections":
+    {
+        "traditional-page1":
+        {
+          "dc.title" : [{"value": "Sample Submission Item", "language": "en"}],
+          "dc.contributor.author" : [
+                    {"value": "Bollini, Andrea", "authority": "rp00001", "confidence": 600}
+          ]
+        },
+        "uploads":
+        {	
+            "files": [ 
+            {
+                "metadata": {
+                    "dc.title" : [{"value": "MyFile.pdf"}],
+                    "dc.description" : [{"value": "Description of the sample file"}]
+                },
+                "sizeBytes": 8528,
+                "checkSum": {
+                    "checkSumAlgorithm": "MD5",
+                    "value": "9d8f0f9e369cf12159d47c146c499cf4"
+                },
+                "url": "https://demo.dspace.org/server/api/core/bitstreams/00001abf-b2e0-477a-99de-104db7cb6469/content",
+                "accessConditions": [
+                    {
+                        "id": 123,
+                        "name": "openaccess"
+                    },
+                    {
+                        "id": 126,
+                        "name": "administrator"
+                    },
+                    {
+                        "id": 127,
+                        "name": "embargo",
+                        "startDate": "2018-06-24T00:40:54.970+0000"
+                    },
+                    {
+                        "id": 128,
+                        "name": "lease",
+                        "endDate": "2017-12-24T00:40:54.970+0000"
+                    }
+                ]
+            }]
+        }
+    }
 }
 ```
 

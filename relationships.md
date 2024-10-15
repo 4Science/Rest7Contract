@@ -21,6 +21,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
   "leftwardValue": "Smith, Jane",
   "rightPlace": 1,
   "type": "relationship",
+  "uniqueType": "core.relationship",
   "_links": {
     "relationshipType": {
       "href": "https://demo.dspace.org/server/api/core/relationships/530/relationshipType"
@@ -45,6 +46,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
       "rightMinCardinality": 0,
       "rightMaxCardinality": null,
       "type": "relationshiptype",
+      "uniqueType": "core.relationshiptype",
       "_links": {
         "leftType": {
           "href": "https://demo.dspace.org/server/api/core/entitytypes/1"
@@ -61,6 +63,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
           "id": 1,
           "label": "Publication",
           "type": "entitytype",
+          "uniqueType": "core.entitytype",
           "_links": {
             "self": {
               "href": "https://demo.dspace.org/server/api/core/entitytypes/1"
@@ -74,6 +77,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
           "id": 2,
           "label": "Person",
           "type": "entitytype",
+          "uniqueType": "core.entitytype",
           "_links": {
             "self": {
               "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -204,6 +208,7 @@ It would respond with
         "leftPlace": 1,
         "rightPlace": 2,
         "type": "relationship",
+        "uniqueType": "core.relationship",
         "_links": {
           "relationshipType": {
             "href": "https://demo.dspace.org/server/api/core/relationships/590/relationshipType"
@@ -228,6 +233,7 @@ It would respond with
             "rightMinCardinality": 0,
             "rightMaxCardinality": null,
             "type": "relationshiptype",
+            "uniqueType": "core.relationshiptype",
             "_links": {
               "leftType": {
                 "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -244,6 +250,7 @@ It would respond with
                 "id": 2,
                 "label": "Person",
                 "type": "entitytype",
+                "uniqueType": "core.entitytype",
                 "_links": {
                   "self": {
                     "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -257,6 +264,7 @@ It would respond with
                 "id": 4,
                 "label": "OrgUnit",
                 "type": "entitytype",
+                "uniqueType": "core.entitytype",
                 "_links": {
                   "self": {
                     "href": "https://demo.dspace.org/server/api/core/entitytypes/4"
@@ -277,6 +285,7 @@ It would respond with
         "leftPlace": 2,
         "rightPlace": 1,
         "type": "relationship",
+        "uniqueType": "core.relationship",
         "_links": {
           "relationshipType": {
             "href": "https://demo.dspace.org/server/api/core/relationships/589/relationshipType"
@@ -301,6 +310,7 @@ It would respond with
             "rightMinCardinality": 0,
             "rightMaxCardinality": null,
             "type": "relationshiptype",
+            "uniqueType": "core.relationshiptype",
             "_links": {
               "leftType": {
                 "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -317,6 +327,7 @@ It would respond with
                 "id": 2,
                 "label": "Person",
                 "type": "entitytype",
+                "uniqueType": "core.entitytype",
                 "_links": {
                   "self": {
                     "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -330,6 +341,7 @@ It would respond with
                 "id": 4,
                 "label": "OrgUnit",
                 "type": "entitytype",
+                "uniqueType": "core.entitytype",
                 "_links": {
                   "self": {
                     "href": "https://demo.dspace.org/server/api/core/entitytypes/4"
