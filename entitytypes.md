@@ -18,6 +18,7 @@ A sample can be found at https://demo.dspace.org/server/#https://demo.dspace.org
         "id": 1,
         "label": "Publication",
         "type": "entitytype",
+        "uniqueType": "core.entitytype",
         "_links": {
           "self": {
             "href": "https://demo.dspace.org/server/api/core/entitytypes/1"
@@ -31,6 +32,7 @@ A sample can be found at https://demo.dspace.org/server/#https://demo.dspace.org
         "id": 2,
         "label": "Person",
         "type": "entitytype",
+        "uniqueType": "core.entitytype",
         "_links": {
           "self": {
             "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -66,6 +68,7 @@ A sample can be found at https://demo.dspace.org/server/#https://demo.dspace.org
   "id": 1,
   "label": "Publication",
   "type": "entitytype",
+  "uniqueType": "core.entitytype",
   "_links": {
     "self": {
       "href": "https://demo.dspace.org/server/api/core/entitytypes/1"

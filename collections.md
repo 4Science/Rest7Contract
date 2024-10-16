@@ -82,7 +82,8 @@ Provide detailed information about a specific collection. The JSON response docu
       }
     ]
   },
-  "type": "collection"
+  "type": "collection",
+  "uniqueType": "core.collection"
 }
 ```
 
@@ -394,6 +395,7 @@ The json representation is as follow
         "groupUUID": "11cc35e5-a11d-4b64-b5b9-0052a5d15509",
         "action": "DEFAULT_BITSTREAM_READ",
         "type": "resourcePolicy",
+        "uniqueType": "authz.resourcePolicy"
         "_links": {
           "self": {
             "href": "https://demo.dspace.org/server/api/authz/resourcePolicies/2844"

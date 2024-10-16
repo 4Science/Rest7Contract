@@ -28,7 +28,8 @@ Provide detailed information about a specific feature. Access is restricted to s
   "resourcetypes": [
   	"core.item"
   ],
-  "type": "feature"
+  "type": "feature",
+  "uniqueType": "authz.feature"
 }
 ```
 

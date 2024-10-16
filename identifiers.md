@@ -28,7 +28,8 @@ On success, the identifier resource is returned as a response.
       "value" : "https://doi.org/10.33515/dspace-61",
       "identifierType" : "doi",
       "identifierStatus" : "TO_BE_REGISTERED",
-      "type" : "identifier"
+      "type" : "identifier",
+      "uniqueType": "pid.identifier"
     }
    ```
 
@@ -53,6 +54,7 @@ Return an array of identifiers associated with the given item.
         "identifierType": "doi",
         "identifierStatus": "TO_BE_REGISTERED",
         "type": "identifier",
+        "uniqueType": "pid.identifier",
         "_links": {
           "self": {
             "href": "http://localhost:8080/server/api/ppid/identifiers"
@@ -65,6 +67,7 @@ Return an array of identifiers associated with the given item.
         "identifierType": "handle",
         "identifierStatus": null,
         "type": "identifier",
+        "uniqueType": "pid.identifier",
         "_links": {
           "self": {
             "href": "http://localhost:8080/server/api/ppid/identifiers"

@@ -7,18 +7,20 @@ Provide access to the OpenAIRE Broker topics. It returns the list of the OpenAIR
 [
 
   {
-    id: "ENRICH!MORE!PID",
-    type: "nbtopic",
-    name: "ENRICH/MORE/PID",
-    lastEvent: "2020/10/09 10:11 UTC",
-    totalSuggestions: "33"
+    "id": "ENRICH!MORE!PID",
+    "type": "nbtopic",
+    "uniqueType": "integration.nbtopic",
+    "name": "ENRICH/MORE/PID",
+    "lastEvent": "2020/10/09 10:11 UTC",
+    "totalSuggestions": "33"
   },
   {
-    id: "ENRICH!MISSING!ABSTRACT",
-    type: "nbtopic",
-    name: "ENRICH/MISSING/ABSTRACT",
-    lastEvent: "2020/10/09 10:11 UTC",
-    totalSuggestions: "21"
+    "id": "ENRICH!MISSING!ABSTRACT",
+    "type": "nbtopic",
+    "uniqueType": "integration.nbtopic",
+    "name": "ENRICH/MISSING/ABSTRACT",
+    "lastEvent": "2020/10/09 10:11 UTC",
+    "totalSuggestions": "21"
   },
   ...
 ]
@@ -41,11 +43,12 @@ Provide detailed information about a specific OpenAIRE Broker topic. The JSON re
 ​
 ```json
 {
-  id: "ENRICH!MORE!PID",
-  type: "nbtopic",
-  name: "ENRICH/MORE/PID",
-  lastEvent: "2020/10/09 10:11 UTC",
-  totalEvents: 33
+  "id": "ENRICH!MORE!PID",
+  "type": "nbtopic",
+  "uniqueType": "integration.nbtopic",
+  "name": "ENRICH/MORE/PID",
+  "lastEvent": "2020/10/09 10:11 UTC",
+  "totalEvents": 33
 }
  ```
 ​

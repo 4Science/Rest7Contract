@@ -30,7 +30,8 @@ Provide detailed information about a specific item. The JSON response document i
   "discoverable": false,
   "withdrawn": false,
   "lastModified": "2019-06-24T00:40:54.970+0000",
-  "type": "item"
+  "type": "itemtemplate",
+  "uniqueType": "core.itemtemplate",
 }
 ```
  

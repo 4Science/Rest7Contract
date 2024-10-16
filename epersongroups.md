@@ -17,6 +17,7 @@
   },
   "permanent": true,
   "type": "group",
+  "uniqueType": "eperson.group",
   "_links": {
     "subgroups": {
       "href": "https://demo.dspace.org/server/api/eperson/groups/617cf46b-535c-42d5-9d22-327ce2eff6dc/subgroups"
@@ -120,6 +121,7 @@ Sample:
           "metadata": {},
           "permanent": true,
           "type": "group",
+          "uniqueType": "eperson.group",
           "_links": {
             "subgroups": {
               "href": "https://demo.dspace.org/server/api/eperson/groups/617cf46b-535c-42d5-9d22-327ce2eff6dc/subgroups"
@@ -256,6 +258,7 @@ Sample:
           "selfRegistered": false,
           "groups": null,
           "type": "eperson",
+          "uniqueType": "eperson.eperson",
           "_links": {
             "self": {
               "href": "https://demo.dspace.org/server/api/eperson/epersons/a6086b34-3918-45b7-8ddd-9329a702a26a"

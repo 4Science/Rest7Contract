@@ -20,7 +20,8 @@ Provide detailed information about a specific resource policy. The JSON response
   "action": "READ",
   "startDate" : null,
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy",
 }
 ```
 
@@ -147,7 +148,8 @@ To set a startDate
   "action": "READ",
   "startDate" : null,
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 the add operation will result in:
@@ -160,7 +162,8 @@ the add operation will result in:
   "action": "READ",
   "startDate" : "2019-10-31",
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 To set a name and a description
@@ -175,7 +178,8 @@ To set a name and a description
   "action": "READ",
   "startDate" : "2019-10-31",
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 the add operation will result in:
@@ -188,7 +192,8 @@ the add operation will result in:
   "action": "READ",
   "startDate" : "2019-10-31",
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 Return codes, see also general [return codes for PATCH requests](patch.md#error-codes):
@@ -219,7 +224,8 @@ that will transform
   "action": "READ",
   "startDate" : "2019-10-31",
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 in 
@@ -232,7 +238,8 @@ in
   "action": "READ",
   "startDate" : null,
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 Return codes, see also general [return codes for PATCH requests](patch.md#error-codes):
@@ -257,7 +264,8 @@ For example, starting with the following item data:
   "action": "READ",
   "startDate" : "2019-10-31",
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 the replace operation will result in:
@@ -270,7 +278,8 @@ the replace operation will result in:
   "action": "READ",
   "startDate" : "2020-01-01",
   "endDate" : null,
-  "type": "resourcepolicy"
+  "type": "resourcepolicy",
+  "uniqueType": "authz.resourcepolicy"
 ```
 
 Return codes, see also general [return codes for PATCH requests](patch.md#error-codes):

@@ -23,6 +23,7 @@ The JSON response document is as follows
         "id" : "import",
         "name" : "import",
         "type" : "script",
+        "uniqueType": "system.script",
         "description" : "Import items into DSpace",
         "_links" : {
           "self" : {
@@ -33,6 +34,7 @@ The JSON response document is as follows
       {
         "name" : "metadata-import",
         "type" : "script",
+        "uniqueType": "system.script",
         "description" : "Import metadata after batch editing",
         "_links" : {
           "self" : {
@@ -59,6 +61,7 @@ The JSON response document is as follows
    "name" : "import",
    "description" : "Import items into DSpace",
    "type" : "script",
+   "uniqueType": "system.script",
    "parameters" : [
     {
       "name" : "-a",

@@ -25,6 +25,7 @@ Provide detailed information about a specific request. The JSON response documen
   "acceptRequest":false,
   "allfiles":false,
   "type":"itemrequest",
+  "uniqueType": "tools.itemrequest",
   "bitstreamId":"dca2dadb-7028-40a9-ab39-1a47726df7ef",
   "itemId":"71d9fb0c-cc36-41c1-b1d3-63887b414fca",
   "requestEmail":"jsmith@example.com",
