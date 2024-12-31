@@ -138,7 +138,8 @@ Provide detailed information about a specific workspaceitem. The JSON response d
   	 	"license-uri": "https://creativecommons.org/licenses/by/4.0/"
   	 }
   },
-  "type": "workspaceitem"
+  "type": "workspaceitem",
+  "uniqueType": "submission.workspaceitem"
 }
 ```
 

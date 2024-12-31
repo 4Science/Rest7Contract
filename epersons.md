@@ -50,6 +50,7 @@
   "selfRegistered": true,
   "machineTokenGenerated": true,
   "type": "eperson",
+  "uniqueType": "eperson.eperson",
   "_links": {
     "self": {
       "href": "https://demo.dspace.org/server/api/eperson/epersons/028dcbb8-0da2-4122-a0ea-254be49ca107"

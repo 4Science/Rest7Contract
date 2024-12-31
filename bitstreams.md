@@ -23,7 +23,8 @@ Provide detailed information about a specific bitstream. The JSON response docum
     "value": "9d8f0f9e369cf12159d47c146c499cf4"
   },
   "sequenceId": null,
-  "type": "bitstream"
+  "type": "bitstream",
+  "uniqueType": "core.bitstream"
 }
 ```
 

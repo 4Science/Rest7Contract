@@ -20,6 +20,7 @@ Example:
         "hierarchical": true,
         "preloadLevel": 1,
         "type": "vocabulary",
+        "uniqueType": "submission.vocabulary",
         "_links": {
           "entries": {
             "href": "https://demo.dspace.org/server/api/submission/vocabularies/srsc/entries"
@@ -35,6 +36,7 @@ Example:
         "scrollable": true,
         "hierarchical": false,
         "type": "vocabulary",
+        "uniqueType": "submission.vocabulary",
         "_links": {
           "entries": {
             "href": "https://demo.dspace.org/server/api/submission/vocabularies/srsc/entries"
@@ -50,6 +52,7 @@ Example:
         "scrollable": true,
         "hierarchical": false,
         "type": "vocabulary",
+        "uniqueType": "submission.vocabulary",
         "_links": {
           "entries": {
             "href": "https://demo.dspace.org/server/api/submission/vocabularies/common_iso_languages/entries"
@@ -86,7 +89,8 @@ Provide detailed information about a specific controlled vocabulary. The JSON re
   "scrollable": false,
   "hierarchical": true,
   "preloadLevel": 1,
-  "type": "vocabulary"
+  "type": "vocabulary",
+  "uniqueType": "submission.vocabulary"
 }
 ```
 

@@ -17,6 +17,7 @@ sample for a source /api/integration/suggestionsources/reciter
     "id": "reciter",
     "total": 2,
     "type": "suggestionsource",
+    "uniqueType": "integration.suggestionsource",
     "_links": {
       "self": {
         "href": "https://dspace7.4science.cloud/server/api/integration/suggestionsources/reciter"

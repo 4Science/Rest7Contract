@@ -23,7 +23,8 @@ Also exposes whether it's a new user registration, or a password reset for an ex
   "id": 1,
   "email": "user@institution.edu",
   "user": null,
-  "type": "registration"
+  "type": "registration",
+  "uniqueType": "eperson.registration"
 }
 ```
 2. User registration linked to an eperson:
@@ -32,7 +33,8 @@ Also exposes whether it's a new user registration, or a password reset for an ex
   "id": 2,
   "email": "user@institution.edu",
   "user": "028dcbb8-0da2-4122-a0ea-254be49ca107",
-  "type": "registration"
+  "type": "registration",
+  "uniqueType": "eperson.registration"
 }
 ```
 3. User registration done using **orcid** that didn't provide an email:
@@ -42,6 +44,7 @@ Also exposes whether it's a new user registration, or a password reset for an ex
   "email": null,
   "user": "028dcbb8-0da2-4122-a0ea-254be49ca107",
   "type": "registration",
+  "uniqueType": "eperson.registration",
   "registrationType": "orcid",
   "netId": "0000-1111-2222-3333",
   "registrationMetadata": {
@@ -87,6 +90,7 @@ Also exposes whether it's a new user registration, or a password reset for an ex
   "email": "power-user@orcid.org",
   "user": "028dcbb8-0da2-4122-a0ea-254be49ca107",
   "type": "registration",
+  "uniqueType": "eperson.registration",
   "registrationType": "orcid",
   "netId": "0000-1111-2222-3333",
   "registrationMetadata": {

@@ -19,7 +19,8 @@ Provide detailed information about a specific workflow definition. The JSON resp
 {
   "name": "default",
   "isDefault": true,
-  "type": "workflow-definition"
+  "type": "workflowdefinition",
+  "uniqueType": "config.workflowdefinition",
 }
 ```
 

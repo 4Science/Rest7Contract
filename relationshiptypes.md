@@ -25,6 +25,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
   "rightMinCardinality": 0,
   "rightMaxCardinality": null,
   "type": "relationshiptype",
+  "uniqueType": "core.relationshiptype",
   "_links": {
     "leftType": {
       "href": "https://demo.dspace.org/server/api/core/entitytypes/1"
@@ -41,6 +42,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
       "id": 1,
       "label": "Publication",
       "type": "entitytype",
+      "uniqueType": "core.entitytype",
       "_links": {
         "self": {
           "href": "https://demo.dspace.org/server/api/core/entitytypes/1"
@@ -54,6 +56,7 @@ A sample can be found at https://demo.dspace.org/#https://demo.dspace.org/server
       "id": 2,
       "label": "Person",
       "type": "entitytype",
+      "uniqueType": "core.entitytype",
       "_links": {
         "self": {
           "href": "https://demo.dspace.org/server/api/core/entitytypes/2"
@@ -95,7 +98,8 @@ Assuming that the sample `config/entities/relationship-types.xml` data model has
         "leftMaxCardinality": null,
         "rightMinCardinality": 0,
         "rightMaxCardinality": null,
-        "type": "relationshiptype"
+        "type": "relationshiptype",
+        "uniqueType": "core.relationshiptype",
       },
       {
         "id": 1,
@@ -107,7 +111,8 @@ Assuming that the sample `config/entities/relationship-types.xml` data model has
         "leftMaxCardinality": null,
         "rightMinCardinality": 0,
         "rightMaxCardinality": null,
-        "type": "relationshiptype"
+        "type": "relationshiptype",
+        "uniqueType": "core.relationshiptype",
       },
       {
         "id": 7,
@@ -119,7 +124,8 @@ Assuming that the sample `config/entities/relationship-types.xml` data model has
         "leftMaxCardinality": null,
         "rightMinCardinality": 0,
         "rightMaxCardinality": null,
-        "type": "relationshiptype"
+        "type": "relationshiptype",
+        "uniqueType": "core.relationshiptype",
       },
       { // this is a different relationshipttype than the one with id 10
         // as it is about Publication and OrgUnit
@@ -132,7 +138,8 @@ Assuming that the sample `config/entities/relationship-types.xml` data model has
         "leftMaxCardinality": null,
         "rightMinCardinality": 0,
         "rightMaxCardinality": null,
-        "type": "relationshiptype"
+        "type": "relationshiptype",
+        "uniqueType": "core.relationshiptype",
       },
       {
         "id": 18, 
@@ -144,7 +151,8 @@ Assuming that the sample `config/entities/relationship-types.xml` data model has
         "leftMaxCardinality": null,
         "rightMinCardinality": 0,
         "rightMaxCardinality": null,
-        "type": "relationshiptype"
+        "type": "relationshiptype",
+        "uniqueType": "core.relationshiptype",
       }    
     ]
   }

@@ -30,6 +30,7 @@ for example, starting with the following document
 {
 	"id": 1,
 	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
 	"sections":
 	{
 		"traditional-page1":
@@ -59,6 +60,7 @@ will result in
 {
 	"id": 1,
 	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
 	"sections":
 	{
 		"traditional-page1":
@@ -104,6 +106,7 @@ trasforming
 {
 	"id": 1,
 	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
 	"sections":
 	{
 		"traditional-page1":
@@ -130,6 +133,7 @@ back in
 {
 	"id": 1,
 	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
 	"sections":
 	{
 		"traditional-page1":

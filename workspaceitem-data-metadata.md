@@ -61,9 +61,10 @@ it is also possible to insert the new metadata in a specific position
 for example (note that from now authentication bearer will be omitted), starting with the following document  
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
       			"dc.title": [
@@ -98,9 +99,10 @@ the following request
 will result in
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
       			"dc.title": [
@@ -142,9 +144,10 @@ and an additional call as follow
 will get the final document
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
       			"dc.title": [
@@ -196,9 +199,10 @@ For example the following call initialize dc.subject metadata to our previous ex
 will get the final document
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
        		        "dc.subject": [
@@ -255,9 +259,10 @@ it is also possible to initialize or **replace** the whole metadata values sendi
 
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
 		        "dc.subject": [
@@ -328,9 +333,10 @@ It is possible to remove a specific metadatavalue
 trasforming above json example in
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
 		        "dc.subject": [
@@ -385,9 +391,10 @@ or removing all the metadata values for a specific metadata key
 `curl --data '[{ "op": "remove", "path": "/sections/traditionalpageone/dc.contributor.author"}]' -X PATCH ${dspace7-url}/api/submission/workspaceitems/1`
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
 		        "dc.subject": [
@@ -423,9 +430,10 @@ To change the title of the previous example
 `curl --data '[{ "op": "replace", "path": "/sections/traditionalpageone/dc.title/0", "value": {"value": "Modified title", "language":"it_IT"}}]' -X PATCH ${dspace7-url}/api/submission/workspaceitems/1`
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
 		        "dc.subject": [
@@ -458,9 +466,10 @@ It is also possible to change only the language of the existent title
 `curl --data '[{ "op": "replace", "path": "/sections/traditionalpageone/dc.title/0/language", "value": "en_US"}]' -X PATCH ${dspace7-url}/api/submission/workspaceitems/1`
 ```json
 {
-	id: 1,
-	type: "workspaceitem",
-	sections:
+	"id": 1,
+	"type": "workspaceitem",
+	"uniqueType": "submission.workspaceitem",
+	"sections":
 	{
 		"traditionalpageone": {
 		        "dc.subject": [

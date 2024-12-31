@@ -13,13 +13,15 @@ It is a JSON object with the following structure (matches the response from the 
         "value": "https://doi.org/10.33515/dspace-54",
         "identifierType": "doi",
         "identifierStatus": "PENDING",
-        "type": "identifier"
+        "type": "identifier",
+        "uniqueType": "pid.identifier"
       },
       {
         "value": "http://localhost:4000/handle/123456789/420",
         "identifierType": "handle",
         "identifierStatus": null,
-        "type": "identifier"
+        "type": "identifier",
+        "uniqueType": "pid.identifier"
       }
     ],
     "displayTypes": [

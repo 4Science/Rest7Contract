@@ -48,6 +48,7 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
       } ] ],
       "nestedSections" : [ ],
       "type" : "section",
+      "uniqueType": "layout.section",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/layout/sections/researchoutputs"
@@ -76,7 +77,8 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
           "componentType" : "facet"
         } ] ],
         "nestedSections" : [ ],
-        "type" : "section"
+        "type" : "section",
+        "uniqueType": "layout.section"
       }, {
         "id" : "projects",
         "componentRows" : [ [ {
@@ -97,7 +99,8 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
           "componentType" : "facet"
         } ] ],
         "nestedSections" : [ ],
-        "type" : "section"
+        "type" : "section",
+        "uniqueType": "layout.section"
       }, {
         "id" : "researcherprofiles",
         "componentRows" : [ [ {
@@ -118,7 +121,8 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
           "componentType" : "facet"
         } ] ],
         "nestedSections" : [ ],
-        "type" : "section"
+        "type" : "section",
+        "uniqueType": "layout.section"
       }, {
         "id" : "site",
         "componentRows" : [ [ {
@@ -172,9 +176,11 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
           "componentType" : "top"
         } ] ],
         "nestedSections" : [ ],
-        "type" : "section"
+        "type" : "section",
+        "uniqueType": "layout.section"
       } ],
       "type" : "section",
+      "uniqueType": "layout.section",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/layout/sections/fundings_and_projects"
@@ -201,6 +207,7 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
       } ] ],
       "nestedSections" : [ ],
       "type" : "section",
+      "uniqueType": "layout.section",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/layout/sections/researcherprofiles"
@@ -260,6 +267,7 @@ Provide access to all the configured CRIS layout sections. The full JSON respons
       } ] ],
       "nestedSections" : [ ],
       "type" : "section",
+      "uniqueType": "layout.section",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/layout/sections/site"
@@ -306,6 +314,7 @@ The full JSON response document is as follow
       } ] ],
       "nestedSections" : [ ],
       "type" : "section",
+      "uniqueType": "layout.section",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/layout/sections/sectionresearchoutputs"
@@ -323,6 +332,7 @@ The full JSON response document is as follow
       } ] ],
       "nestedSections" : [ ],
       "type" : "section",
+      "uniqueType": "layout.section",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/layout/sections/sectionfundings_and_projects"
@@ -396,6 +406,7 @@ Provide detailed information about a specific CRIS layout section. The JSON resp
   } ] ],
   "nestedSections" : [ ],
   "type" : "section",
+  "uniqueType": "layout.section",
   "_links" : {
     "self" : {
       "href" : "http://localhost/api/layout/sections/publications"

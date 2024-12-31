@@ -23,6 +23,7 @@ Provide detailed information about a specific ORCID history entry. The JSON resp
   "responseMessage": "<xml><work>...</work>",
   "timestamp": "2014-01-01T23:28:56.782Z", 
   "type": "orcidhistory",
+  "uniqueType": "eperson.orcidhistory",
   "_links": {
     "self": {
       "href": "**/api/eperson/orcidhistories/20"

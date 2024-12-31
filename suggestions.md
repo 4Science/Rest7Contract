@@ -93,6 +93,7 @@ sample for a suggestion /api/integration/suggestions/openaire:gf3d657-9d6d-4a87-
         ]
     },
     "type": "suggestion",
+    "uniqueType": "integration.suggestion",
     "_links": {
       "target": {
         "href": "https://demo.dspace.org/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"
@@ -190,6 +191,7 @@ sample for a search /api/integration/suggestions/search/findByTargetAndSource?so
         } ]
       },
       "type" : "suggestion",
+        "uniqueType": "integration.suggestion",
       "_links" : {
         "target" : {
           "href" : "https://demo.dspace.org/server/api/integration/suggestions/openaire:bbb7feb2-7099-44cd-a896-1d47305a6a44:doi_________::29c72e9c2c3b4a0d730ece3ddbdec059/target"

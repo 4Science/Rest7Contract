@@ -16,6 +16,7 @@ An example JSON response document to `/api/statistics/categories/mainReports`:
 {
     "id": "mainReports",
     "type": "category",
+    "uniqueType": "statistics.category",
     "category-type": "mainReports",
     "_links" : {
      "self" : {
@@ -55,6 +56,7 @@ An example JSON response document to `/api/statistics/categories/search/object?p
             {
                 "id": "site-mainReports",
                 "type": "category",
+                "uniqueType": "statistics.category",
                 "category-type": "mainReports",
                 "_links" : {
                   "self" : {
@@ -76,6 +78,7 @@ An example JSON response document to `/api/statistics/categories/search/object?u
             {
                 "id": "item-mainReports",
                 "type": "category",
+                "uniqueType": "statistics.category",
                 "category-type": "mainReports",
                 "_links" : {
                   "self" : {
@@ -86,6 +89,7 @@ An example JSON response document to `/api/statistics/categories/search/object?u
             {
                 "id": "item-relatedPublications",
                 "type": "category",
+                "uniqueType": "statistics.category",
                 "category-type": "relatedPublications",
                 "_links" : {
                   "self" : {
@@ -96,6 +100,7 @@ An example JSON response document to `/api/statistics/categories/search/object?u
             {
                 "id": "item-relatedProjects",
                 "type": "category",
+                "uniqueType": "statistics.category",
                 "category-type": "relatedProjects",
                 "_links" : {
                   "self" : {

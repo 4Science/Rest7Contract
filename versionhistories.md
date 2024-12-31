@@ -27,7 +27,8 @@ Provide information about for a version history id.
 {
   "id": "1",
   "draftVersion": false,
-  "type": "versionhistory",  
+  "type": "versionhistory",
+  "uniqueType": "versioning.versionhistory",  
   "_links": {
     "self": {
       "href": "https://demo7.dspace.org/server/api/versioning/versionhistories/1"
@@ -68,6 +69,7 @@ Only versions related to archived or withdrawn items are return, the most recent
           "id": "102",
           "version": "2",
           "type": "version",
+          "uniqueType": "versioning.version",
           "created": "2019-10-31T09:44:46.617",
           "summary": "Author order"
       },
@@ -75,6 +77,7 @@ Only versions related to archived or withdrawn items are return, the most recent
         "id": "101",
         "version": "1",
         "type": "version",
+        "uniqueType": "versioning.version",
         "created": "2015-11-03T09:44:46.617",
         "summary": "Fixing some typos in the abstract"
       }

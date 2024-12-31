@@ -18,7 +18,8 @@ Provide detailed information about a specific submission-definition. The JSON re
 {
   "name": "traditional",
   "isDefault": true,
-  "type": "submission-definition"
+  "type": "submissiondefinition",
+  "uniqueType": "config.submissiondefinition",
 }
 
 ```

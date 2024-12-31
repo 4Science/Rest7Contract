@@ -20,12 +20,14 @@ This will correspond to e.g. https://api.creativecommons.org/rest/1.5/ filtered 
         "id": "publicdomain",
         "name": "Public Domain",
         "type": "submissioncclicenses",
+        "uniqueType": "config.submissioncclicenses",
         "fields": []
       },
       {
         "id": "mark",
         "name": "Public Domain Mark",
         "type": "submissioncclicenses",
+        "uniqueType": "config.submissioncclicenses",
         "fields": []
       }
     ]
@@ -48,6 +50,7 @@ Provide detailed information about a specific license. Some licenses are basic, 
   "id": "publicdomain",
   "name": "CC0",
   "type": "submissioncclicenses",
+  "uniqueType": "config.submissioncclicenses",
   "fields": [],
   "_links" : {
     "self" : {
@@ -63,6 +66,7 @@ Some licenses contain questions, e.g. standard retrieved from https://api.creati
   "id": "standard",
   "name": "CC0",
   "type": "submissioncclicenses",
+  "uniqueType": "config.submissioncclicenses",
   "fields": [
     {
       "id": "commercial",
@@ -131,6 +135,7 @@ If the combination of the license and the answers is valid, it will return the l
 {
   "url": "http://creativecommons.org/licenses/by-sa/3.0/us/",
   "type": "submissioncclicenseUrl",
+  "uniqueType": "config.submissioncclicenseUrl",
   "_links": {
     "self": {
       "href": "https://dspace7-internal.atmire.com/server/api/config/submissioncclicenses/search/rightsByQuestions?license=standard&answer_commercial=y&answer_derivatives=sa"

@@ -17,6 +17,7 @@ The JSON response document is as follow.
     "subscriptions" : [ {
       "id" : 1,
       "type" : "subscription",
+      "uniqueType": "core.subscription",
       "subscriptionParameterList" : [ {
         "name" : "frequency",
         "value" : "D"
@@ -66,10 +67,11 @@ Return codes:
 Provide detailed information about a specific subscription.
 The JSON response document is as follow
 
-```
+```json
 {
   "id" : 1,
   "type" : "subscription",
+  "uniqueType": "core.subscription",
   "subscriptionParameterList" : [ {
     "name" : "frequency",
     "value" : "W"
@@ -114,6 +116,7 @@ The supported parameters are:
       {
         "id": 60,
         "type": "subscription",
+        "uniqueType": "core.subscription",
         "subscriptionParameterList" : [ {
 			    "name" : "frequency",
 			    "value" : "M"
@@ -170,6 +173,7 @@ The supported parameters are:
     {
       "id": 60,
       "type": "subscription",
+      "uniqueType": "core.subscription",
       "subscriptionParameterList" : [ {
 			    "name" : "frequency",
 			    "value" : "D"

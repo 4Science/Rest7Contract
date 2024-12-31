@@ -18,7 +18,8 @@ Provide detailed information about a specific authorization. The JSON response d
 ```json
 {
   "id": [eperson-uuid_]feature-id_restobjectcategory.restobjectname_object-id,
-  "type": "authorization"
+  "type": "authorization",
+  "uniqueType": "authz.authorization"
 }
 ```
 

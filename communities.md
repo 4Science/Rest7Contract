@@ -66,7 +66,8 @@ Provide detailed information about a specific community. The JSON response docum
       }
     ]
   },
-  "type": "community"
+  "type": "community",
+  "uniqueType": "core.community"
 }
 ```
 

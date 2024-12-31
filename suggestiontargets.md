@@ -20,6 +20,7 @@ sample for a suggestion /api/integration/suggestiontargets/openaire%3Abbb7feb2-7
   "source" : "openaire",
   "total" : 10,
   "type" : "suggestiontarget",
+    "uniqueType": "integration.suggestiontarget",
   "_links" : {
     "target" : {
       "href" : "http://localhost:8080/server/api/integration/suggestiontargets/openaire:bbb7feb2-7099-44cd-a896-1d47305a6a44/target"
@@ -67,6 +68,7 @@ Sample of a resposne for /api/integration/suggestiontargets/search/findBySource?
       "source" : "openaire",
       "total" : 10,
       "type" : "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
       "_links" : {
         "target" : {
           "href" : "http://localhost:8080/server/api/integration/suggestiontargets/openaire:bbb7feb2-7099-44cd-a896-1d47305a6a44/target"
@@ -117,6 +119,7 @@ Example:
         "source": "reciter",
         "total": 31,
         "type": "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
         "_links": {
           "target": {
             "href": "https://demo.dspace.org/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"
@@ -135,6 +138,7 @@ Example:
         "source": "scopus",
         "total": 11,
         "type": "suggestiontarget",
+        "uniqueType": "integration.suggestiontarget",
         "_links": {
           "target": {
             "href": "https://demo.dspace.org/server/api/core/items/gf3d657-9d6d-4a87-b905-fef0f8cae26"

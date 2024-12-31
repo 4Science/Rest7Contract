@@ -22,6 +22,7 @@ Provide detailed information about a specific ORCID queue entry. The JSON respon
   "recordType": "Publication",
   "operation": "INSERT",
   "type": "orcidqueue",
+  "uniqueType": "eperson.orcidqueue",
   "_links": {
     "self": {
       "href": "**/api/eperson/orcidqueues/73"
@@ -54,6 +55,7 @@ Provide detailed information about all the ORCID queue entries related to the pr
         "recordType": "Project",
         "operation": "UPDATE",
         "type": "orcidQueue",
+        "uniqueType": "eperson.orcidqueue",
         "_links": {
           "self": {
             "href": "**/api/eperson/orcidqueues/68"
@@ -68,6 +70,7 @@ Provide detailed information about all the ORCID queue entries related to the pr
         "recordType": "Publication",
         "operation": "DELETE",
         "type": "orcidQueue",
+        "uniqueType": "eperson.orcidqueue",
         "_links": {
           "self": {
             "href": "**/api/eperson/orcidqueues/73"

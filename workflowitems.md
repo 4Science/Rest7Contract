@@ -69,14 +69,14 @@ Provide detailed information about a specific workflowitem. The JSON response do
   	 			}
   	 		]
  		}
- 	]
-  	},
+ 	],
   	 "cclicense": {
   	 	"image-url": "https://i.creativecommons.org/l/by/4.0/88x31.png",
   	 	"license-uri": "https://creativecommons.org/licenses/by/4.0/"
   	 }
   },
-  "type": "workflowitem"
+  "type": "workflowitem",
+  "uniqueType": "workflow.workflowitem",
 }
 ```
 

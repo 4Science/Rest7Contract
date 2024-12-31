@@ -18,6 +18,7 @@ Provide detailed information about a specific metadata schema. The JSON response
   "prefix": "dc",
   "namespace": "http://dublincore.org/documents/dcmi-terms/",
   "type": "metadataschema",
+  "uniqueType": "core.metadataschema",
   "_links": {
     "self": {
       "href": "https://demo.dspace.org/server/api/core/metadataschemas/1"

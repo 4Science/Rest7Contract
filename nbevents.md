@@ -27,7 +27,8 @@ Return a single suggestion:
     "jurisdiction":"EU",
     "title":"Elliptic Pdes and Symmetry of Interfaces and Layers for Odd Nonlinearities"
   },
-  type: "nbevent"
+  "type": "nbevent",
+  "uniqueType": "integration.nbevent"
 }
 ```
 

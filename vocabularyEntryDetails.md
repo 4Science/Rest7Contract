@@ -26,6 +26,7 @@ Provide detailed information about a specific vocabulary entry. The JSON respons
       },
       "source" : "srsc",
       "type" : "vocabularyEntryDetail",
+      "uniqueType": "submission.vocabularyEntryDetail",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/submission/vocabularyEntryDetails/srsc:SCB110"
@@ -90,6 +91,7 @@ Provide detailed information about all top entries of a specific hierarchical vo
       },
       "source" : "srsc",
       "type" : "vocabularyEntryDetail",
+      "uniqueType": "submission.vocabularyEntryDetail",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/submission/vocabularyEntryDetails/srsc:SCB11"
@@ -115,6 +117,7 @@ Provide detailed information about all top entries of a specific hierarchical vo
       },
       "source" : "srsc",
       "type" : "vocabularyEntryDetail",
+      "uniqueType": "submission.vocabularyEntryDetail",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/submission/vocabularyEntryDetails/srsc:SCB12"
@@ -142,6 +145,7 @@ Provide detailed information about all top entries of a specific hierarchical vo
       },
       "source" : "srsc",
       "type" : "vocabularyEntryDetail",
+      "uniqueType": "submission.vocabularyEntryDetail",
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/submission/vocabularyEntryDetails/srsc:SCB23"

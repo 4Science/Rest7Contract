@@ -72,7 +72,8 @@ Provide detailed information about a specific item. The JSON response document i
   "discoverable": true,
   "withdrawn": false,
   "lastModified": "2017-06-24T00:40:54.970+0000",
-  "type": "item"
+  "type": "item",
+  "uniqueType": "core.item"
 }
 ```
 
@@ -343,6 +344,7 @@ It returns the bundles within this item. See the [bundle endpoint](bundles.md) f
     "handle": null,
     "metadata": {},
     "type": "bundle",
+    "uniqueType": "core.bundle"
     "_links" : {
       "primarybitstream" : {
         "href" : "https://demo.dspace.org/server/api/core/bitstreams/ac49f361-4ffd-47a4-8eb2-e6c73c3f3e76"
@@ -361,6 +363,7 @@ It returns the bundles within this item. See the [bundle endpoint](bundles.md) f
     "handle": null,
     "metadata": {},
     "type": "bundle",
+    "uniqueType": "core.bundle",
     "_links" : {
       "primarybitstream" : {
         "href" : "https://demo.dspace.org/server/api/core/bitstreams/ac49f361-4ffd-47a4-8eb2-e6c73c3f3e76"
@@ -558,6 +561,7 @@ The JSON response document is as follow
 				"deltaPeriod2":31,
 				"rank":null,
 				"type":"metric",
+        "uniqueType": "cris.metric",
 				"_links":{
 					"self":{
 						"href":"http://localhost/api/cris/metrics/1"
@@ -577,6 +581,7 @@ The JSON response document is as follow
 				"deltaPeriod2":null,
 				"rank":null,
 				"type":"metric",
+        "uniqueType": "cris.metric"
 				"_links":{
 					"self":{
 						"href":"http://localhost/api/cris/metrics/2"
@@ -611,12 +616,14 @@ The JSON response is formatted like the example below (the same data model as th
     "value" : "https://doi.org/10.33515/dspace-61",
     "identifierType" : "doi",
     "identifierStatus" : "TO_BE_REGISTERED",
-    "type" : "identifier"
+    "type" : "identifier",
+    "uniqueType": "pid.identifier"
   }, {
     "value" : "123456789/418",
     "identifierType" : "handle",
     "identifierStatus" : null,
-    "type" : "identifier"
+    "type" : "identifier",
+    "uniqueType": "pid.identifier"
   } ],
   "type" : "identifiers",
   "_links" : {
@@ -631,6 +638,16 @@ Return codes:
 * 400 Bad Request - if the item id param is missing or invalid (not an uuid)
 * 401 Unauthorized - if you are not authenticated and versioning is not public
 * 403 Forbidden - if you are not logged in with sufficient permissions and versioning is not public
+* 404 Not found - if the item doesn't exist
+
+### Get Item Submitter
+**/api/core/items/<:uuid>/submitter**
+
+It returns the submitter of the item
+
+Status codes:
+* 200 OK - returning the submitter
+* 204 No Content - if you are not authenticated or you have no read access on that submitter.
 * 404 Not found - if the item doesn't exist
 
 ## Deleting an item

@@ -9,9 +9,9 @@ The section data represent the data about the user uploaded files
     "files": [ 
            {
             "uuid": "00001abf-b2e0-477a-99de-104db7cb6469",
-            "metadata": {
-              "dc.title" : [{value: "sample_file.pdf"}],
-              "dc.description" : [{value: "Description of the sample file"}]
+  	 		"metadata": {
+  	 			"dc.title" : [{"value": "sample_file.pdf"}],
+  	 			"dc.description" : [{"value": "Description of the sample file"}]
            },
            "sizeBytes": 8528,
            "checkSum": {
@@ -82,13 +82,14 @@ will set the title of the first uploaded file to MyFile.pdf returning the follow
 {
     "id": 1,
     "type": "workspaceitem",
+    "uniqueType": "submission.workspaceitem",
     "sections":
     {
        "traditional-page1":
        {
-         "dc.title" : [{value: "Sample Submission Item", language: "en"}],
+          "dc.title" : [{"value": "Sample Submission Item", "language": "en"}],
          "dc.contributor.author" : [
-                {alue: "Bollini, Andrea", authority: "rp00001", confidence: 600}
+                    {"value": "Bollini, Andrea", "authority": "rp00001", "confidence": 600}
          ]
        },
        "uploads":
@@ -96,10 +97,9 @@ will set the title of the first uploaded file to MyFile.pdf returning the follow
            "primary": null,
            "files": [
            {
-                "uuid": "00001abf-b2e0-477a-99de-104db7cb6469",
                 "metadata": {
-                  "dc.title" : [{value: "MyFile.pdf"}],
-                  "dc.description" : [{value: "Description of the sample file"}]
+                    "dc.title" : [{"value": "MyFile.pdf"}],
+                    "dc.description" : [{"value": "Description of the sample file"}]
               },
               "sizeBytes": 8528,
               "checkSum": {
@@ -127,8 +127,7 @@ will set the title of the first uploaded file to MyFile.pdf returning the follow
                      "endDate": "2017-12-24T00:40:54.970+0000"
                   }
               ]
-           }
-           ]
+            }]
        }
     }
 }

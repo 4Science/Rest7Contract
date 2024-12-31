@@ -23,7 +23,8 @@ Provide detailed information about a specific workflow action. An example JSON r
   	    "reject",
   	    "edit_metadata"
   	],
-  	"type": "workflowaction"
+  	"type": "workflowaction",
+	"uniqueType": "config.workflowaction"
 }
 ```
 
@@ -71,7 +72,8 @@ Sample for selecting reviewer(s) who will perform a subsequent step:
         "id": "b1d44ec2815cb282fd41146aab44967b"
       }
     ],
-  	"type": "workflowaction"
+  	"type": "workflowaction",
+	"uniqueType": "config.workflowaction"
 }
 ```
 
@@ -101,7 +103,8 @@ Sample for entering a review with a score:
         "id": "c969a40a9ebd3d08e210a5e59a4f4e0e"
       }
     ],
-  	"type": "workflowaction"
+  	"type": "workflowaction",
+	"uniqueType": "config.workflowaction"
 }
 ```
 

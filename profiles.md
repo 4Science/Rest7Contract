@@ -31,6 +31,7 @@ The JSON response document is as follow
     "profilePreferences": ["AFFILIATION", "EDUCATION", "BIOGRAPHICAL", "IDENTIFIERS"]
   },
   "type": "profile",
+  "uniqueType": "eperson.profile",
 }
 ```
 
@@ -121,7 +122,8 @@ Returns the item that model the profile of the eperson with the given uuid. The 
   "discoverable": true,
   "withdrawn": false,
   "lastModified": "2020-07-20T16:02:19.608+0000",
-  "type": "item"
+  "type": "item",
+  "uniqueType": "core.item"
 }
 ```
 It would respond with:
@@ -163,7 +165,8 @@ Returns the eperson owning the profile. The JSON response document is as follow
   "email": "msmith@samltest.id",
   "requireCertificate": false,
   "selfRegistered": false,
-  "type": "eperson"
+  "type": "eperson",
+  "uniqueType": "eperson.eperson",
 }
 ```
 

@@ -33,6 +33,7 @@ Example response:
   "countdownTo" : "2023-04-05T00:00:00.000+00:00",
   "active" : true,
   "type" : "systemwidealert",
+  "uniqueType": "system.systemwidealert",
   "_links" : {
     "self" : {
       "href" : "http://localhost:8080/server/api/system/systemwidealerts/1"
