@@ -82,7 +82,7 @@ Possible response status
 This endpoint provides a paginated list of statistics for a DSpaceObject. 
 
 The DSpaceObject is given through the following parameters:
-- `uri` The object to retrieve statistics for. The full URI of the rest resource must be specified, i.e. https://{dspace.url}/server/api/core/community/{uuid}
+- `uri` The object to retrieve statistics for. The full URI of the rest resource must be specified, i.e. https://{dspace.url}/server/api/core/communities/{uuid}
 - `startDate` If present represent the date from which the statistics are to be taken into account (date format YYYY-MM-DD)
 - `endDate` If present represent the date until which the statistics are to be taken into account (date format YYYY-MM-DD)
 - `category` If present filter returns only the reports in the requested category, see [Statistics Categories](statistics-categories.md). The parameter must match the `id` of the category

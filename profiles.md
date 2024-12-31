@@ -25,7 +25,7 @@ The JSON response document is as follow
   "orcidSynchronization": {
     "mode": "MANUAL",
     "publicationsPreference": "ALL",
-    "projectsPreference": "ALL",
+    "fundingsPreference": "ALL",
     "productsPreference": "ALL",
     "patentsPreference": "DISABLED",
     "profilePreferences": ["AFFILIATION", "EDUCATION", "BIOGRAPHICAL", "IDENTIFIERS"]
@@ -246,7 +246,7 @@ To do this, REPLACE operations must be used with one of the following paths:
 * **/orcid/publications** - to update the preference relative to the publications synchronization; allowed values are 'DISABLED', 'ALL'
 * **/orcid/products** - to update the preference relative to the products synchronization; allowed values are 'DISABLED', 'ALL'
 * **/orcid/patents** - to update the preference relative to the patents synchronization; allowed values are 'DISABLED', 'ALL'
-* **/orcid/projects** - to update the preference relative to the projects synchronization; allowed values are 'DISABLED', 'ALL'
+* **/orcid/fundings** - to update the preference relative to the projects synchronization; allowed values are 'DISABLED', 'ALL'
 * **/orcid/profile** - to update the preference relative to the profile synchronization; allowed values are a 'BIOGRAPHICAL' (to synchronize other names, country and keywords) and 'IDENTIFIERS' (to synchronize external ids and urls). It is possible to specify multiple values using ',' as separator.
 
 

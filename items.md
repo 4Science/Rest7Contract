@@ -14,7 +14,7 @@ Example: <https://demo.dspace.org/server/#/server/api/core/items>
 **/api/core/items/<:uuid>**
 
 ***
-:warning: In the below example response, the existence of the `place` field for specific metadata values is still under analysis. We are determining whether it can be removed entirely in favor of using the array index (as the `place` field represents the index of each value in an ordered array). For more details see https://jira.duraspace.org/browse/DS-4242
+:warning: In the below example response, the existence of the `place` field for specific metadata values is still under analysis. We are determining whether it can be removed entirely in favor of using the array index (as the `place` field represents the index of each value in an ordered array). For more details see Github issue https://github.com/DSpace/DSpace/issues/7582
 ***
 
 Provide detailed information about a specific item. The JSON response document is as follow
@@ -186,9 +186,7 @@ Provide updated metadata information for an item, when the update is completed t
 
 ```json
 {
-  "id": "a8ba963f-d9c9-4198-b5a4-3f74e2ab6fb9",
   "uuid": "a8ba963f-d9c9-4198-b5a4-3f74e2ab6fb9",
-  "name": "Test new title",
   "handle": "123456789/60636",
   "metadata": {
     "dc.contributor.author": [
@@ -208,9 +206,6 @@ Provide updated metadata information for an item, when the update is completed t
       }
     ]
   },
-  "inArchive": true,
-  "discoverable": true,
-  "withdrawn": false,
   "type": "item"
 }
 ```
@@ -528,7 +523,7 @@ Status codes:
 **GET /api/core/items/{:item-uuid}/version**
 
 Provide version information based on a given Item UUID. An Item UUID will only match one version. READ permissions over the item in addition to the version permissions are checked.
-The JSON response is the same as the [Version endpoint](version.md#get-single-version).
+The JSON response is the same as the [Version endpoint](versions.md#get-single-version).
 
 Return codes:
 * 200 OK - if the operation succeeds

@@ -60,6 +60,29 @@ Provide detailed information about a specific workspaceitem. The JSON response d
         "doi" : "https://doi.org/10.5072/dspace/2",
         "otherIdentifiers" : [ ]
      },
+    "duplicates": {
+      "potentialDuplicates": [
+        {
+          "title": "Sample Submission Item",
+          "uuid": "5ca83276-f003-460d-98b6-dd3c30708749",
+          "owningCollectionName": "Another Collection",
+          "workspaceItemId": null,
+          "workflowItemId": null,
+          "metadata": {
+            "dc.title": [
+              {
+                "value": "Example Item",
+                "language": null,
+                "authority": null,
+                "confidence": -1,
+                "place": 0
+              }
+            ]
+          },
+          "type": "DUPLICATE"
+        }
+      ]
+    },
   	 "traditional-page1": {
   	 	"dc.title" : [{"value": "Sample Submission Item"}],
   	 	"dc.contributor.author" : [
@@ -166,7 +189,7 @@ In addition, it allows in future to change the 1:1 association between collectio
 #### findBySubmitter
 **/api/submission/workspaceitems/search/findBySubmitter?uuid=<:submitter-uuid>**
 
-It returns the workspaceitem created by the specified submitter
+It returns the list of workspaceitems created by the specified submitter (eperson).
 
 ## Get Single Workspace Item from Item UUID
 
@@ -183,6 +206,15 @@ It would respond with:
 * 403 Forbidden - if you are not logged in with sufficient permissions to view the workspace item
 * 204 if the workspace item doesn't exist
 
+## DELETE Method
 
+**/api/submission/workspaceitems/<:ws-item-uuid>**
 
+Deletes workspace item with the given UUID. The deletion includes the deletion of the item object that is associated to the given workspace item.
 
+Available Response Codes are
+
+* 204 No content - if the operation succeed
+* 401 Unauthorized - if the requester is not authenticated
+* 403 Forbidden - if the requester does not have sufficient permissions ((deletion of workspace items can only be requested by the submitter of the workspace item or administrators)
+* 404 Not found - if the workspace item doesn't exist
