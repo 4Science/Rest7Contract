@@ -381,10 +381,12 @@ This return the list of owned processes, i.e. the processes that have been start
 
 The supported parameters are:
 * page, size [see pagination](README.md#Pagination)
+* processStatus: optional, limit the returned processes to the specified status. The possible `status` values are `SCHEDULED`, `RUNNING`, `COMPLETED` and `FAILED`
 
 Return codes:
 * 200 OK - if the operation succeed
 * 401 Unauthorized - if you are not authenticated
+* 400 Bad Request - if provided parameter isn't supported
 
 ## Execution Deletion
 **DELETE /api/system/processes/<:process-id>**
