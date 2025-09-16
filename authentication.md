@@ -177,11 +177,12 @@ When clicking on a link to download a protected file in the UI no authentication
  
 The token follows the "JSON Web Token structure", same as the login tokens.
   
- ```
+```
  curl -v -X POST https://{dspace-server.url}/api/authn/shortlivedtokens -H "Authorization: Bearer eyJhbG...COdbo" -H "X-XSRF-TOKEN: {csrf-token}"
- ```
- 
- ```json
+```
+
+This will return the token, E.G.:
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiJ9.eyJlaWQiOiJjZDgyNGE2MS05NWJlLTRlMTYtYmNjZC01MWZlYTI2NzA3ZDAiLCJzZyI6W10sImV4cCI6MTU5MDQxMzUwNn0.XRK4ldh9l4My45gJzLtcW97hVUpbtM5oAQsxuQ2V37c",
   "_links": {
@@ -205,11 +206,12 @@ This endpoint can provide a machine token, a long lived machine token that can b
 
 The token follows the "JSON Web Token structure", same as the login tokens.
 
- ```
+```
  curl -v -X POST https://{dspace-server.url}/api/authn/machinetokens -H "Authorization: Bearer eyJhbG...COdbo" -H "X-XSRF-TOKEN: {csrf-token}"
- ```
+```
 
- ```json
+This will return the token, E.G.:
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiJ9.eyJlaWQiOiJjZDgyNGE2MS05NWJlLTRlMTYtYmNjZC01MWZlYTI2NzA3ZDAiLCJzZyI6W10sImV4cCI6MTU5MDQxMzUwNn0.XRK4ldh9l4My45gJzLtcW97hVUpbtM5oAQsxuQ2V37c",
   "type": "machinetoken",
@@ -232,9 +234,9 @@ Return codes
 
 This endpoint invalidate the machine token generated from the current user, if any.
 
- ```
+```
  curl -v -X DELETE https://{dspace-server.url}/api/authn/machinetokens -H "Authorization: Bearer eyJhbG...COdbo" -H "X-XSRF-TOKEN: {csrf-token}"
- ```
+```
 
 Return codes
 - 204 No content.
