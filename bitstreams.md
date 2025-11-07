@@ -133,16 +133,12 @@ This endpoint returns a presigned URL that allows direct, temporary access to th
 A JSON object containing:
 
 - `presignedUrl`: The generated presigned URL granting temporary access.
-- `bitstreamId`: The UUID of the bitstream.
-- `filename`: The user-friendly name of the bitstream (if available).
 
 Example response body:
 
 ```json
 {
   "presignedUrl": "https://bucket.s3.amazonaws.com/object?X-Amz-Algorithm=...",
-  "bitstreamId": "8d33bdfb-e7ba-43e6-a93a-f445b7e8a1e2",
-  "filename": "example.pdf"
 }
 ```
 
