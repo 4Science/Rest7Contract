@@ -117,6 +117,45 @@ The supported **Request Headers** are:
 * Range: not implemented yet. Provide support to partial content download
 * If-None-Match: not implemented yet. Support for cache control
 
+### Presigned URL
+
+**GET /api/core/bitstreams/<:uuid>/signedurl**
+
+This endpoint returns a presigned URL that allows direct, temporary access to the bitstream content stored in the configured storage backend (e.g., S3). Clients can use this URL to download the bitstream without passing through the DSpace server, improving performance and offloading bandwidth.
+
+#### Security
+
+- Requires READ permission on the specified bitstream (`hasPermission(#uuid, 'BITSTREAM','READ')`).
+
+
+#### Response
+
+A JSON object containing:
+
+- `presignedUrl`: The generated presigned URL granting temporary access.
+
+Example response body:
+
+```json
+{
+  "presignedUrl": "https://bucket.s3.amazonaws.com/object?X-Amz-Algorithm=...",
+}
+```
+
+
+#### Error Responses
+
+- **404 Not Found**: If the bitstream with the given UUID does not exist or a presigned URL cannot be generated.
+- **401 Unauthorized**: If the requester is anonymous  and the bitstream does not have read permissions.
+- **403 Forbidden**: If the requester lacks sufficient permissions to read the bitstream.
+- **500 Internal Server Error**: If an unexpected error occurs during processing.
+
+
+#### Notes
+
+- The expiration time of the presigned URL is configurable via the DSpace configuration property `assetstore.s3.presigned.url.expiration.seconds`.
+- This URL is intended for temporary direct access and should be used promptly before expiration.
+
 ### Main Thumbnail
 **/api/core/bitstreams/<:uuid>/thumbnail**
 
