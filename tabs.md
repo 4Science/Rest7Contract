@@ -67,7 +67,7 @@ To create a new Tab perform as POST with the follow JSON:
               "security": 0,
               "boxType": "METADATA",
               "metadataSecurityFields": [
-                "cris.policy.eperson"
+                "dspace.policy.eperson"
               ],
               "configuration": {
                 "type": "boxmetadataconfiguration",
@@ -141,7 +141,7 @@ Return codes:
 * 200 OK - if the operation succeed
 * 401 Unauthorized - if you are not authenticated
 * 403 Forbidden - if you are not logged in with sufficient permissions
-* 422 UNPROCESSABLE ENTITY - if the json body is unprocessable for CrisLayoutTabRest entity
+* 422 UNPROCESSABLE ENTITY - if the json body is unprocessable for DynamicLayoutTabRest entity
 
 ## Delete tab
 **DELETE /api/layout/tabs/<:id>**
@@ -220,7 +220,7 @@ Provide detailed information about a specific tab. The JSON response document is
               "security": 0,
               "boxType": "METADATA",
               "metadataSecurityFields": [
-                "cris.policy.eperson"
+                "dspace.policy.eperson"
               ],
               "configuration": {
                 "id": 2,

@@ -1,7 +1,7 @@
 # Layout Box Types
 [Layout Tab Endpoints](tabs.md)
 
-The following table list the boxTypes available out-of-box in DSpace-CRIS 7
+The following table list the boxTypes available out-of-box in DSpace 11
 
 boxType | description
 ------------ | -------------
