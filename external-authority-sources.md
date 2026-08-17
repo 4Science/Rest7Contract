@@ -368,12 +368,22 @@ sample for an external source /api/integration/externalsources/orcid/entryValues
 
 Return the list of entity types that are supported by this external provider. For example a Pubmed provider can return "Publication" and "Dataset" as supported entity types assuming that a separate Dataset entity type has been configured in DSpace
 
+The supported parameters are:
+* `page`, `size` [see pagination](README.md#Pagination)
+
+## Search methods
+
+### findByEntityType
+**/api/integration/externalsources/search/findByEntityType?entityType=<:type-label>**
+
+This endpoint is public and does not require authentication.
 
 The supported parameters are:
-* entityType (mandatory) the label of the entity type
-* page, size [see pagination](README.md#Pagination)
+* `entityType` (mandatory) the label of the entity type
+* `page`, `size` [see pagination](README.md#Pagination)
+
 It returns a list of external sources that support the requested entity type
 
 Return codes:
-* 200 OK - if the operation succeed, a 0 size list can be returned
+* 200 OK - if the operation succeeds, a 0 size list can be returned
 * 400 Bad Request - if the entityType parameter is missing

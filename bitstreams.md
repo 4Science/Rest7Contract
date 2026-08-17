@@ -117,6 +117,57 @@ The supported **Request Headers** are:
 * Range: not implemented yet. Provide support to partial content download
 * If-None-Match: not implemented yet. Support for cache control
 
+### Access Status
+**GET /api/core/bitstreams/<:uuid>/accessStatus**
+
+This endpoint exposes the mechanism for retrieving and calculating the access status of a DSpace bitstream based on the anonymous group or the current user, depending on the system configuration.
+
+The user the status is calculated for depends on the [`access.status.for-user.bitstream`](https://github.com/DSpace/DSpace/blob/master/dspace/config/dspace.cfg) property in the `dspace.cfg` file. When set to `current` the status is calculated for the currently authenticated user, when set to `anonymous` it is calculated for the anonymous group. The shipped `dspace.cfg` sets it to `current`; if the property is absent the code falls back to `anonymous`. Items expose a [similar endpoint](items.md#Access-Status).
+
+The result includes the embargo date in a YYYY-MM-DD format only if the status is `embargo`. It can be checked by calling this endpoint with the corresponding bitstream UUID.
+
+Example: <https://demo.dspace.org/server/#https://demo.dspace.org/server/api/core/bitstreams/8d33bdfb-e7ba-43e6-a93a-f445b7e8a1e2/accessStatus>
+
+It returns the access status of the bitstream, e.g.:
+
+_200 - Response if the UUID parameter is valid_
+```json
+{
+  "status": "open.access",
+  "embargoDate": null,
+  "type": "accessStatus",
+  "_links" : {
+    "self" : {
+      "href" : "http://{dspace-server.url}/api/core/bitstreams/8d33bdfb-e7ba-43e6-a93a-f445b7e8a1e2/accessStatus"
+    }
+  }
+}
+```
+_Includes the embargo date when the status is embargo_
+```json
+{
+  "status": "embargo",
+  "embargoDate": "2050-01-01",
+  "type": "accessStatus",
+  "_links" : {
+    "self" : {
+      "href" : "http://{dspace-server.url}/api/core/bitstreams/8d33bdfb-e7ba-43e6-a93a-f445b7e8a1e2/accessStatus"
+    }
+  }
+}
+```
+
+Fields
+- `status`: String value, one of `open.access`, `embargo` or `restricted`
+- `embargoDate`: String value, the accessibility date in YYYY-MM-DD format, only set when the status is `embargo`, otherwise `null`
+- `type`: Type of the endpoint, "accessStatus" in this case
+
+Status codes:
+* 200 OK - if the operation succeeds
+* 401 Unauthorized - if you are not authenticated and lack `METADATA_READ` permission on the bitstream
+* 403 Forbidden - if you are logged in but lack sufficient permissions (e.g. no `METADATA_READ` permission on the bitstream)
+* 404 Not found - if the bitstream doesn't exist
+
 ### Presigned URL
 
 **GET /api/core/bitstreams/<:uuid>/signedurl**

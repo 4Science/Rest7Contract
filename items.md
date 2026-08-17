@@ -296,6 +296,7 @@ _200 - Response if the UUID parameter is valid_
 ```json
 {
   "status": "metadata.only",
+  "embargoDate": null,
   "type": "accessStatus",
   "_links" : {
     "self" : {
@@ -306,26 +307,34 @@ _200 - Response if the UUID parameter is valid_
 ```
 
 Fields
-- Status: String value if the UUID is valid
-- Type: Type of the endpoint, "accessStatus" in this case
+- `status`: String value, one of `metadata.only`, `embargo`, `open.access`, `restricted` or `unknown`
+- `embargoDate`: String value, the accessibility date in YYYY-MM-DD format, only set when the status is `embargo`, otherwise `null`
+- `type`: Type of the endpoint, "accessStatus" in this case
 
 Exposed links:
 - self: The valid URL to the item's access status
 
 Default access status values
-- metadata.only = Item doesn't contain a primary file
-- open.access = Item's primary file is downloadable to anonymous users
-- embargo = Item's primary file is under an embargo
-- restricted = Item's primary file is not downloadable to anonymous users
+- metadata.only = Item's access status metadata indicates metadata only
+- open.access = Item's access status metadata indicates open access
+- embargo = Item's access status metadata indicates an embargo
+- restricted = Item's access status metadata indicates restricted access
 - unknown = Item's status is indeterminable or unknown
 
-_Note: the calculation of those default values is based on the policies of the item's primary file._
-_The term primary file also refers to the first file in the original bundle if no primary file is defined._
+_Note: in this distribution the access status of an item is derived from item metadata. The status is read from the
+`access.status.access-status-metadata` property (default `datacite.rights`) and the availability date, used when the
+status is `embargo`, is read from the `access.status.availability-date-metadata` property (default `datacite.available`).
+If the status metadata is missing the `unknown` status is returned; if the status is `embargo` but the availability date
+is unparseable or in the past, the `open.access` status is returned (a missing date results in an error). The metadata
+values recognized for the status are `embargo`, `openaccess`, `metadata-only` and `restricted`; any other value, including
+URI-style values such as `info:eu-repo/semantics/openAccess`, falls back to `unknown`._
 
-Return code
-- 200 Ok if the parameter is a valid item UUID
-- 400 Bad Request if the parameter is invalid
-- 404 Not Found if the item cannot be retrieved 
+Return codes:
+* 200 OK - if the operation succeeds
+* 400 Bad Request - if the parameter is invalid
+* 401 Unauthorized - if you are not authenticated and the item is not visible to anonymous users
+* 403 Forbidden - if you are logged in but lack READ permission on the item
+* 404 Not Found - if the item cannot be retrieved
 
 ### Bundles
 
@@ -697,4 +706,21 @@ Return codes:
 * 200 OK - if the operation succeed
 * 204 No content - if the operation succeed but no item was found
 * 500 Internal server error - if multiple item was found related to the given url
+
+### findEditAuthorized
+
+**GET /api/core/items/search/findEditAuthorized**
+
+It returns the list of Items that the current user is authorized to edit.
+
+The supported parameters are:
+* `query`: limit the returned Items to those with metadata values matching the query terms.
+* `page`, `size` [see pagination](README.md#Pagination)
+
+Return codes:
+* 200 OK - if the operation succeeds
+* 401 Unauthorized - if you are not authenticated
+
+Note: this endpoint is Solr-based: administrators are returned all items (the edit filter is skipped), and in-progress
+(workspace/workflow) items, which are not in the search index, are excluded.
 

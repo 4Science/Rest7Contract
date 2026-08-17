@@ -255,6 +255,22 @@ Return codes:
 * 200 OK - if the operation succeeds
 * 401 Unauthorized - if you are not authenticated
 
+#### findEditAuthorized
+
+**/api/core/collections/search/findEditAuthorized**
+
+Get the list of all collections the current user is authorized to edit.
+
+The supported parameters are:
+* `query`: limit the returned collections to those with metadata values matching the query terms.
+* `page`, `size` [see pagination](README.md#Pagination)
+
+Return codes:
+* 200 OK - if the operation succeeds
+* 401 Unauthorized - if you are not authenticated
+
+Note: edit rights on a collection coincide with admin rights (direct or inherited), which are resolved at index-time on the Solr `admin` field.
+
 ## Patch operations
 
 Collection metadata can be modified as described in [Modifying metadata via Patch](metadata-patch.md).
