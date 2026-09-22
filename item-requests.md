@@ -24,6 +24,9 @@ Provide detailed information about a specific request. The JSON response documen
   "token":"c19e820ea0b270f0ec98323864dcc8b8",
   "acceptRequest":false,
   "allfiles":false,
+  "accessToken":null,
+  "accessExpiry":null,
+  "accessExpired":false,
   "type":"itemrequest",
   "uniqueType": "tools.itemrequest",
   "bitstreamId":"dca2dadb-7028-40a9-ab39-1a47726df7ef",
@@ -31,6 +34,7 @@ Provide detailed information about a specific request. The JSON response documen
   "requestEmail":"jsmith@example.com",
   "requestMessage":"Please send me a copy of this.",
   "requestName":"John Smith",
+  "uniqueType": "tools.itemrequest",
   "_links":{
     "bitstream":{
       "href":"https://demo.dspace.org/server/api/tools/itemrequests/1/bitstream"
@@ -61,6 +65,9 @@ Item properties:
   * decisionDate: date that the request was granted or denied.  READ-ONLY.
   * token: opaque string which uniquely identifies this request.  READ-ONLY
 
+  * accessToken: unique token providing access to a requested resource. READ-ONLY.
+  * accessExpiry: date on which the access to the requested resource expires
+  * accessExpired: true if access is expired (supercedes accessExpiry). READ-ONOLY.
 Exposed links:
 
   * item: the item requested
@@ -71,10 +78,54 @@ Return codes:
 * 200 OK - if the operation succeeded
 * 404 NOT FOUND - if the token is unknown (no such request exists)
 
+## Find Single Request by Access Token
+**/api/tools/itemrequests/search/byAccessToken?accessToken=<:token>**
+
+Search for a single request item by access token (the token given to the user for authenticated access to a requested resource). Provides information sufficient for frontend processing / status information but no personal details about the requestor, or approval token (the fields will be present but the values replaced by the string "sanitized").
+```json
+{
+  "id": 7,
+  "decisionDate": null,
+  "expires": null,
+  "requestDate": "2026-06-21T15:30:53.545094Z",
+  "token": "sanitized",
+  "acceptRequest": false,
+  "allfiles": false,
+  "accessToken": "ed38fdeb91d7ed870910b7aee9255bd6",
+  "accessExpiry": null,
+  "accessExpired": true,
+  "requestMessage": "sanitized",
+  "type": "itemrequest",
+  "itemId": "5cf39972-48c3-453c-bb58-f635634e594f",
+  "bitstreamId": "da6c314b-de45-4140-b1ec-b473a98c43a8",
+  "requestEmail": "sanitized",
+  "requestName": "sanitized",
+  "uniqueType": "tools.itemrequest",
+  "_links":{
+    "bitstream":{
+      "href":"https://demo.dspace.org/server/api/tools/itemrequests/7/bitstream"
+    },
+    "item":{
+      "href":"https://demo.dspace.org/server/api/tools/itemrequests/7/item"
+    },
+    "self":{
+      "href":"https://demo.dspace.org/server/api/tools/itemrequests/7"
+    }
+  }
+}
+```
+
+Item properties:
+
+Item properties, exposed links and response codes are the same as the single request endpoint described above.
+
 ## Creating a Request
 **POST /api/tools/itemrequests**
 
-Anyone may create an item request.  The Content-Type is JSON.  Example:
+Anyone may create an item request (depending on backend configuration parameter `request.item.type`). The Content-Type is JSON.  
+
+Example JSON payload:
+
 ```json
 {
     "itemId": "71d9fb0c-cc36-41c1-b1d3-63887b414fca",
@@ -85,7 +136,11 @@ Anyone may create an item request.  The Content-Type is JSON.  Example:
     "requestMessage": "Please send this to me."
 }
 ```
-`bitstreamId` is ignored and may be omitted if `allfiles` is `false`.  `requestMessage` is optional.  `requestEmail` and `requestName` are ignored and may be omitted if the session is authenticated -- these fields will be filled from the session user's EPerson.  If the session is anonymous then `requestEmail` is required.  `bitstreamId` is required if `allfiles` is false.  `itemId` is always required.
+
+* `bitstreamId` is ignored and may be omitted if `allfiles` is `true`. `bitstreamId` is required if `allfiles` is false.
+* `itemId` is always required.
+* `requestMessage` is optional.
+* `requestEmail` and `requestName` are ignored and may be omitted if the session is authenticated -- these fields will be filled from the session user's EPerson. If the session is anonymous then `requestEmail` is required.
 
 The response is empty, generated token should not be exposed.
 

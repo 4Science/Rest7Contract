@@ -9,10 +9,12 @@ To track a page view, make an HTTP POST request to this endpoint.
 The sections below describe the parameters for a page view event. All other information about the interaction can be derived from the request itself.
 
 ### Required Parameters
-- `targetId`: The id of the object the user viewed
-- `targetType`: The type of the object the user viewed
+
+- `targetId`: The UUID of the DSpace object the user viewed
+- `targetType`: The type of the object the user viewed, e.g., `item`, `bitstream`, `collection` etc.
 
 ### Optional Parameters
+
 - `referrer`: The referrer of the object the user viewed. When this value is not present, it will be derived from the request instead. 
 
 ### Status codes:
@@ -27,7 +29,7 @@ The sections below describe the parameters for a page view event. All other info
 {
   "targetId": "43f9bb3e-f90d-458f-9858-7e4589481d18",
   "targetType": "item",
-  "referrer": "https://demo7.dspace.org/search"
+  "referrer": "https://demo.dspace.org/search"
 }
 ```
 

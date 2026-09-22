@@ -13,7 +13,7 @@ entity type requested. This contract describes this endpoint.
 This endpoint will list all (REST supported) configurations defined in `dspace/config/modules/metadata-security.cfg`,
 based on an entity type. The configuration settings entries are embedded with a metadataSecurityDefault,
 metadataCustomSecurity and a self link, where metadataSecurityDefault is the fallback level of security, or the level of
-security for an EntityType, metadataCustomSecurity are all the configuration levels of the metadatas related with an
+security for an EntityType, metadataCustomSecurity are all the configuration levels of the metadata related with an
 EntityType.
 
 The JSON response document is as follows

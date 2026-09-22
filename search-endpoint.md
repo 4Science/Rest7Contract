@@ -4,7 +4,7 @@
 ## Search Endpoint
 **/api/discover/search**   
 
-This endpoint provides the functionality of the Discovery search screen: https://wiki.duraspace.org/display/DSDOC7x/Discovery.
+This endpoint provides the functionality of the Discovery search screen: https://wiki.lyrasis.org/display/DSDOC10x/Discovery.
 It will provide detailed information on the Discovery search configuration that can be used to build complex searches.
 
 It supports the following parameters:
@@ -279,6 +279,7 @@ The returned JSON response will be like:
         "name" : "author",
         "facetType": "text",
         "facetLimit": 10,
+        "openByDefault": false,
         "_embedded" : {
           "values" : [
             {
@@ -313,6 +314,7 @@ The returned JSON response will be like:
         "name" : "subject",
         "facetType": "hierarchical",
         "facetLimit": 10,
+        "openByDefault": false,
         "_embedded" : {
           "values" : [
             {
@@ -347,6 +349,7 @@ The returned JSON response will be like:
         "name": "dateIssued",
         "facetType": "date",
         "facetLimit": 10,
+        "openByDefault": false,
         "minValue": "1940-03-15",
         "maxValue": "2017-11-06",
         "_links": {
@@ -440,6 +443,8 @@ This endpoint returns a list of configured facets with their respective values. 
 
 Some facets can be configured in the `discovery.xml` file to expose minimum and maximum values. In the example below the `dateIssued` filter has this configuration enabled.
 
+Some facets can be configured in the `discovery.xml` to be presented initially opened/active by the `openByDefault` value.
+
 The returned JSON response will be like:
 
 ```json
@@ -476,6 +481,7 @@ The returned JSON response will be like:
         "name" : "author",
         "facetType": "text",
         "facetLimit": 5,
+        "openByDefault": false,
         "_links": {
           "next" : {
             "href": "/api/discover/facets/author?query=my+query&scope=9076bd16-e69a-48d6-9e41-0238cb40d863&f.title=abcd,notcontains&f.author=1234,authority&page=1&size=5"
@@ -524,6 +530,7 @@ The returned JSON response will be like:
         "name" : "subject",
         "facetType": "text",
         "facetLimit": 5,
+        "openByDefault": false,
         "_links": {
           "next" : {
             "href": "/api/discover/facets/subject?query=my+query&scope=9076bd16-e69a-48d6-9e41-0238cb40d863&f.title=abcd,notcontains&f.author=1234,authority&page=1&size=5"
@@ -574,6 +581,7 @@ The returned JSON response will be like:
         "facetLimit": 10,
         "minValue": "1940-03-15",
         "maxValue": "2017-11-06",
+        "openByDefault": false,
         "_links": {
           "self": {
             "href": "/api/discover/facets/dateIssued?query=my+query&scope=9076bd16-e69a-48d6-9e41-0238cb40d863&f.title=abcd,notcontains&f.author=1234,authority"
@@ -736,6 +744,7 @@ The JSON response document is as follow
         "name" : "author",
         "facetType": "text",
         "facetLimit": 10,
+        "openByDefault": false,
         "_links": {
           "self": {
             "href": "/api/discover/facets/author"
@@ -746,6 +755,7 @@ The JSON response document is as follow
         "name" : "subject",
         "facetType": "hierarchical",
         "facetLimit": 10,
+        "openByDefault": false,
         "_links": {
           "self": {
             "href": "/api/discover/facets/subject"
@@ -755,6 +765,7 @@ The JSON response document is as follow
       {
         "name" : "dateIssued",
         "facetType": "date",
+        "openByDefault": false,
         "facetLimit": 10,
         "hasMinMaxValues": true,
         "_links": {
@@ -767,6 +778,7 @@ The JSON response document is as follow
         "name" : "has_content_in_original_bundle",
         "facetType": "standard",
         "facetLimit": 2,
+        "openByDefault": false,
         "_links": {
           "self": {
             "href": "https://demo.dspace.org/server/api/discover/facets/has_content_in_original_bundle"
@@ -792,6 +804,17 @@ This endpoint returns a list of values that correspond to the given facet name. 
 * `scope`: UUID of a specific DSpace container (site, community or collection) to which the search has to be limited, e.g. `scope=9076bd16-e69a-48d6-9e41-0238cb40d863`.
 * `f.<:filter-name>=<:filter-value>,<:filter-operator>`: Advanced search filter that has to be used to filter the result set. The `filter-name` and `filter-operator` must match a value returned by parent search endpoint (see above). For example `f.author=5df05073-3be7-410d-8166-e254369e4166,authority` or `f.title=rainbows,notcontains`. If the filter operator is absent or invalid a "422 Unprocessable Entity" will be returned.
 * `page`, `size` & `sort` [see pagination](README.md#Pagination): the sort name be "count" (results ordered descending by the number of matching records) or "index" (results order alphabetically).
+
+The facet contains the following information about itself:
+* `name`: name of the facet
+* `facetType`: type of the facet, e.g. `hierarchical`, `date`, `text`, `authority`
+* `facetLimit`: maximum number of entries on the facet page
+* `hasMore`: if the facet has more entries on the next facet page
+* `openByDefault`: if the facet is meant to be presented initially opened/active by the `openByDefault` value.
+* `minValue`: if configured to expose minimum and maximum values `exposeMinAndMaxValue` this is the minimum value
+* `maxValue`: if configured to expose minimum and maximum values `exposeMinAndMaxValue` this is the maximum value
+
+
 
 Example: TODO
 
@@ -825,6 +848,7 @@ The returned JSON response will be like:
   "name" : "author",
   "facetType": "text",
   "facetLimit": 10,
+  "openByDefault": false,
   "_embedded" : {
     "values" : [
         {
@@ -1137,6 +1161,7 @@ Example
       "name" : "namedresourcetype",
       "facetType" : "text",
       "facetLimit" : 10,
+      "openByDefault": false,
       "_links" : {
         "self" : {
           "href" : "https://demo.dspace.org/server/api/discover/facets/namedresourcetype?configuration=workspace"
@@ -1173,6 +1198,7 @@ Example
       "name" : "itemtype",
       "facetType" : "text",
       "facetLimit" : 10,
+      "openByDefault": false
       "_links" : {
         "self" : {
           "href" : "https://demo.dspace.org/server/api/discover/facets/itemtype?configuration=workspace"
@@ -1185,6 +1211,7 @@ Example
       "name" : "dateIssued",
       "facetType" : "date",
       "facetLimit" : 5,
+      "openByDefault": false
       "minValue" : "1990-02-13",
       "maxValue" : "2010-11-03",
       "_links" : {
@@ -1335,6 +1362,7 @@ Example
       "name" : "namedresourcetype",
       "facetType" : "text",
       "facetLimit" : 10,
+      "openByDefault": false,
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/discover/facets/namedresourcetype?configuration=workflow"
@@ -1361,6 +1389,7 @@ Example
       "name" : "itemtype",
       "facetType" : "text",
       "facetLimit" : 10,
+      "openByDefault": false,
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/discover/facets/itemtype?configuration=workflow"
@@ -1373,6 +1402,7 @@ Example
       "name" : "dateIssued",
       "facetType" : "date",
       "facetLimit" : 5,
+      "openByDefault": false,
       "minValue" : "1990-02-13",
       "maxValue" : "2010-11-03",
       "_links" : {
@@ -1401,6 +1431,7 @@ Example
       "name" : "submitter",
       "facetType" : "text",
       "facetLimit" : 10,
+      "openByDefault": false,
       "_links" : {
         "self" : {
           "href" : "http://localhost/api/discover/facets/submitter?configuration=workflow"

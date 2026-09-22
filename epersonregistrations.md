@@ -90,7 +90,6 @@ Also exposes whether it's a new user registration, or a password reset for an ex
   "email": "power-user@orcid.org",
   "user": "028dcbb8-0da2-4122-a0ea-254be49ca107",
   "type": "registration",
-  "uniqueType": "eperson.registration",
   "registrationType": "orcid",
   "netId": "0000-1111-2222-3333",
   "registrationMetadata": {
@@ -181,15 +180,16 @@ Status codes:
 * 422 Unprocessable Entity - if the email address was omitted or the operation is not valid
 
 ## Create new EPerson registration
+
 **POST /api/eperson/registrations?accountRequestType={requestType_forgot_or_register}**
 
-To create a new EPerson registration, perform a post with the JSON below to the eperson registrations endpoint (without being authenticated) in this case the groups field must be empty.
+To create a new EPerson registration, perform a POST with the JSON payload below to the eperson registrations endpoint (without being authenticated) in this case the groups field must be empty.
 In case the groups field contains values, then it is interpret as an invitation to register and join these groups. Such invitation can be created only by user that are administrator of all the specified groups.
 
 ```json
 {
   "email": "user@institution.edu",
-  "type": "registration"
+  "type": "registration",
   "groups":[
            "c7a30034-e63d-4109-b47f-e7baf7ca6cc8",
            "d7k77012-s23c-3310-g49a-e2zag9vv6nm1",
@@ -198,12 +198,13 @@ In case the groups field contains values, then it is interpret as an invitation 
 }
 ```
 
-Requires query parameter 'accountRequestType' set with either 'register' or 'forgot' value, depending on the action requested.
+Requires query parameter `accountRequestType` set with value either `register` or `forgot`, depending on the action requested.
 
 No other properties can be set (e.g. the name cannot be defined)
-If successful, an email will be sent with a token allowing the user to continue the registration
 
-Verifying whether a new registration can be created can happen using the "epersonRegistration" [feature](features.md), verified against the site
+If successful, an email will be sent with a token allowing the user to continue the registration.
+
+Verifying whether a new registration can be created can happen using the "epersonRegistration" [feature](features.md), verified against the site.
 
 Status codes:
 * 201 Created - if the operation succeed
@@ -211,9 +212,8 @@ Status codes:
 * 401 Unauthorized - if registration is disabled, you are not authorized to create a new registration
 * 422 Unprocessable Entity - if the email address was omitted or the e-mail address is in a domain that is not allowed in config `authentication-password.domain.valid`
 
-
 ## Forgot password
 
-The same endpoint as [Create new EPerson registration](#create-new-eperson-registration) is used.
+The same endpoint as [Create new EPerson registration](#create-new-eperson-registration) is used (set query parameter `accountRequestType` to `forgot`).
 
 Using the same endpoint ensures it's not possible for a malicious user to identify which email addresses are registered by attempting a registration and verifying whether the account exists

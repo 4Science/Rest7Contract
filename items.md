@@ -283,8 +283,7 @@ the discoverable operation will result in:
 
 **GET /api/core/items/<:uuid>/accessStatus**
 
-This endpoint expose the mechanism for retrieving and calculating the access status of a DSpace item.
-It can be checked by calling this endpoint with the the corresponding item UUID.
+This endpoint expose the mechanism for retrieving and calculating the access status (including the embargo date) of a DSpace item based on the anonymous group or the current user, depending on the system configuration. See access.status.for-user.item property in the dspace.cfg file. The result includes the embargo date in a YYYY-MM-DD format only if the status is embargo. It can be checked by calling this endpoint with the corresponding item UUID.
 
 ```
 curl -v "http://{dspace-server.url}/api/core/items/2245f2c5-1bed-414b-a313-3fd2d2ec89d6/accessStatus"
@@ -296,6 +295,7 @@ _200 - Response if the UUID parameter is valid_
 ```json
 {
   "status": "metadata.only",
+  "embargoDate": null,
   "type": "accessStatus",
   "_links" : {
     "self" : {
@@ -304,9 +304,23 @@ _200 - Response if the UUID parameter is valid_
   }
 }
 ```
+_Includes the embargo date when the status is embargo..._
+```json
+{
+  "status": "embargo",
+  "embargoDate": "2050-01-01",
+  "type": "accessStatus",
+  "_links" : {
+    "self" : {
+      "href" : "http://{dspace-server.url}/api/core/items/2245f2c5-1bed-414b-a313-3fd2d2ec89d7/accessStatus"
+    }
+  }
+}
+```
 
 Fields
 - Status: String value if the UUID is valid
+- EmbargoDate: String value, the accessibility date in YYYY-MM-DD format
 - Type: Type of the endpoint, "accessStatus" in this case
 
 Exposed links:
@@ -687,6 +701,21 @@ Return codes:
 * 403 Forbidden - if you are not logged in with sufficient permissions. Please note that withdrawn items are visible to everyone without any metadata details
 * 404 Not found - if the item doesn't exist
 
+#### findEditAuthorized
+**GET /api/core/items/search/findEditAuthorized**
+
+It returns the list of Items that the current user is authorized to edit
+
+The supported parameters are:
+* `query`: limit the returned Items to those with metadata values matching the query terms.
+  The query is also used to build a prefix query. It can be used to implement
+  an autosuggest feature over the collection name
+* `page`, `size` [see pagination](README.md#Pagination)
+
+Return codes:
+* 200 OK - if the operation succeeds
+* 401 Unauthorized - if you are not authenticated
+
 ### findByCustomURL
 
 **GET /api/core/items/search/findByCustomURL?q=<:custom-url>**
@@ -695,6 +724,6 @@ Search an item by the provided custom url. If the provided url is an UUID, a fin
 
 Return codes:
 * 200 OK - if the operation succeed
-* 204 No content - if the operation succeed but no item was found
+* 404 Not found - if no item was found with the given custom URL
 * 500 Internal server error - if multiple item was found related to the given url
 
